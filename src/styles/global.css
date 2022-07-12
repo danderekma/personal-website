@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "SF Pro Rounded Bold";
+  src: url("../assets/fonts/SF-Pro-Rounded-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SF Pro Rounded Regular";
+  src: url("../assets/fonts/SF-Pro-Rounded-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SF Pro Rounded Light";
+  src: url("../assets/fonts/SF-Pro-Rounded-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SF Pro Rounded Thin";
+  src: url("../assets/fonts/SF-Pro-Rounded-Thin.otf") format("opentype");
+}
