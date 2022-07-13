@@ -21,9 +21,10 @@ module.exports = {
         "sf-thin": ["SF Pro Rounded Thin", ...defaultTheme.fontFamily.sans]
       },
       colors: {
-        gray: "#24272E"
+        "gray": "#24272E",
+        "light-gray": "#EFEFEF",
+        "dark-gray": "#1F2227"
       }
     }
-  },
-  plugins: []
+  }
 };
