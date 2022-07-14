@@ -42,32 +42,32 @@ export default function Index(): React.ReactNode {
             <img
               src={ProfilePicLight}
               alt="profile-pic-light.jpeg"
-              className="rounded-full w-80 dark:hidden"
+              className="w-56 rounded-full sm:w-80 dark:hidden"
             />
             <img
               src={ProfilePicDark}
               alt="profile-pic-dark.jpeg"
-              className="hidden rounded-full w-80 dark:inline"
+              className="hidden w-56 rounded-full sm:w-80 dark:inline"
             />
           </div>
-          <div className="relative flex flex-col justify-center gap-5 h-[340px] bg-light-gray dark:bg-dark-gray bottom-7">
-            <div className="flex flex-col items-center gap-2">
-              <h1 className="text-5xl font-sf-bold dark:text-white">
+          <div className="relative flex flex-col justify-center gap-3 sm:gap-5 h-[250px] sm:h-[340px] bg-light-gray dark:bg-dark-gray bottom-7">
+            <div className="flex flex-col items-center sm:gap-2">
+              <h1 className="text-3xl sm:text-5xl font-sf-bold dark:text-white">
                 👋 Hi, I’m Derek!
               </h1>
-              <h2 className="text-3xl font-sf-regular dark:text-white">
+              <h2 className="text-xl sm:text-3xl font-sf-regular dark:text-white">
                 I’m a student developer at UC Davis.
               </h2>
             </div>
             <div className="flex flex-col items-center">
               <ul className="list-none">
-                <li className="text-xl font-sf-light dark:text-white">
+                <li className="text-sm sm:text-xl font-sf-light dark:text-white">
                   ☕️ Fueled by coffee
                 </li>
-                <li className="text-xl font-sf-light dark:text-white">
+                <li className="text-sm sm:text-xl font-sf-light dark:text-white">
                   💼 Searching for internship...
                 </li>
-                <li className="text-xl font-sf-light dark:text-white">
+                <li className="text-sm sm:text-xl font-sf-light dark:text-white">
                   <a href="mailto:danderekma@gmail.com">
                     ✉️ danderekma@gmail.com
                   </a>
@@ -77,62 +77,68 @@ export default function Index(): React.ReactNode {
             <div className="flex justify-center gap-3">
               <a
                 href="https://www.facebook.com/profile.php?id=100010707514748"
-                className="dark:hidden"
+                className="w-5 sm:w-6 dark:hidden"
               >
                 <img src={FacebookIconLight} alt="facebook-icon-light.svg" />
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=100010707514748"
-                className="hidden dark:inline"
+                className="hidden w-5 sm:w-6 dark:inline"
               >
                 <img src={FacebookIconDark} alt="facebook-icon-dark.svg" />
               </a>
               <a
                 href="https://www.instagram.com/danderekma/"
-                className="dark:hidden"
+                className="w-5 sm:w-6 dark:hidden"
               >
                 <img src={InstagramIconLight} alt="instagram-icon-light.svg" />
               </a>
               <a
                 href="https://www.instagram.com/danderekma/"
-                className="hidden dark:inline"
+                className="hidden w-5 sm:w-6 dark:inline"
               >
                 <img src={InstagramIconDark} alt="instagram-icon-dark.svg" />
               </a>
-              <a href="https://github.com/danderekma" className="dark:hidden">
+              <a
+                href="https://github.com/danderekma"
+                className="w-5 sm:w-6 dark:hidden"
+              >
                 <img src={GithubIconLight} alt="github-icon-light.svg" />
               </a>
               <a
                 href="https://github.com/danderekma"
-                className="hidden dark:inline"
+                className="hidden w-5 sm:w-6 dark:inline"
               >
                 <img src={GithubIconDark} alt="github-icon-dark.svg" />
               </a>
               <a
                 href="https://www.linkedin.com/in/danderekma/"
-                className="dark:hidden"
+                className="w-5 sm:w-6 dark:hidden"
               >
                 <img src={LinkedInIconLight} alt="linkedin-icon-light.svg" />
               </a>
               <a
                 href="https://www.linkedin.com/in/danderekma/"
-                className="hidden dark:inline"
+                className="hidden w-5 sm:w-6 dark:inline"
               >
                 <img src={LinkedInIconDark} alt="linkedin-icon-dark.svg" />
               </a>
-              <a href="https://twitter.com/danderekma" className="dark:hidden">
+              <a
+                href="https://twitter.com/danderekma"
+                className="w-5 sm:w-6 dark:hidden"
+              >
                 <img src={TwitterIconLight} alt="twitter-icon-light.svg" />
               </a>
               <a
                 href="https://twitter.com/danderekma"
-                className="hidden dark:inline"
+                className="hidden w-5 sm:w-6 dark:inline"
               >
                 <img src={TwitterIconDark} alt="twitter-icon-dark.svg" />
               </a>
             </div>
           </div>
         </div>
-        <footer className="w-full pb-4 text-center font-sf-thin text-black/25 dark:text-white/25">
+        <footer className="w-full pb-4 text-sm text-center sm:text-base font-sf-thin text-black/25 dark:text-white/25">
           Created with ❤️ by Derek Ma <br /> © 2022
         </footer>
       </main>
