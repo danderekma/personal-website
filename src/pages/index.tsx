@@ -49,7 +49,7 @@ export default function Index(): React.ReactNode {
             <StaticImage
               src="../assets/images/profile-pic-dark.webp"
               alt="profile-pic-dark.webp"
-              className="hidden w-56 sm:w-80 dark:inline"
+              className="!hidden w-56 sm:w-80 dark:!inline"
               imgClassName="rounded-full"
               placeholder="none"
             />
