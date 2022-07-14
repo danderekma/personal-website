@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-postcss",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-use-dark-mode",
       options: {
