@@ -4,8 +4,8 @@ import { Helmet } from "react-helmet";
 import useDarkMode from "use-dark-mode";
 import DarkModeToggle from "react-dark-mode-toggle";
 
-import ProfilePicLight from "../assets/images/profile-pic-light.jpeg";
-import ProfilePicDark from "../assets/images/profile-pic-dark.jpeg";
+import { StaticImage } from "gatsby-plugin-image";
+
 import FacebookIconLight from "../assets/svgs/facebook-icon-light.svg";
 import FacebookIconDark from "../assets/svgs/facebook-icon-dark.svg";
 import InstagramIconLight from "../assets/svgs/instagram-icon-light.svg";
@@ -39,15 +39,19 @@ export default function Index(): React.ReactNode {
         </div>
         <div>
           <div className="relative z-10 flex justify-center">
-            <img
-              src={ProfilePicLight}
-              alt="profile-pic-light.jpeg"
-              className="w-56 rounded-full sm:w-80 dark:hidden"
+            <StaticImage
+              src="../assets/images/profile-pic-light.webp"
+              alt="profile-pic-light.webp"
+              className="w-56 sm:w-80 dark:hidden"
+              imgClassName="rounded-full"
+              placeholder="none"
             />
-            <img
-              src={ProfilePicDark}
-              alt="profile-pic-dark.jpeg"
-              className="hidden w-56 rounded-full sm:w-80 dark:inline"
+            <StaticImage
+              src="../assets/images/profile-pic-dark.webp"
+              alt="profile-pic-dark.webp"
+              className="hidden w-56 sm:w-80 dark:inline"
+              imgClassName="rounded-full"
+              placeholder="none"
             />
           </div>
           <div className="relative flex flex-col justify-center gap-3 sm:gap-5 h-[250px] sm:h-[340px] bg-light-gray dark:bg-dark-gray bottom-7">
