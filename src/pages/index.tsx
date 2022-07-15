@@ -54,24 +54,24 @@ export default function Index(): React.ReactNode {
               placeholder="none"
             />
           </div>
-          <div className="relative flex flex-col justify-center gap-3 sm:gap-5 h-[250px] sm:h-[340px] bg-light-gray dark:bg-dark-gray bottom-7">
+          <div className="relative flex flex-col transition duration-200 justify-center gap-3 sm:gap-5 h-[250px] sm:h-[340px] bg-light-gray dark:bg-dark-gray bottom-7">
             <div className="flex flex-col items-center sm:gap-2">
-              <h1 className="text-3xl sm:text-5xl font-sf-bold dark:text-white">
+              <h1 className="text-3xl transition duration-200 sm:text-5xl font-sf-bold dark:text-white">
                 👋 Hi, I’m Derek!
               </h1>
-              <h2 className="text-xl sm:text-3xl font-sf-regular dark:text-white">
+              <h2 className="text-xl transition duration-200 sm:text-3xl font-sf-regular dark:text-white">
                 I’m a student developer at UC Davis.
               </h2>
             </div>
             <div className="flex flex-col items-center">
               <ul className="list-none">
-                <li className="text-sm sm:text-xl font-sf-light dark:text-white">
+                <li className="text-sm transition duration-200 sm:text-xl font-sf-light dark:text-white">
                   ☕️ Fueled by coffee
                 </li>
-                <li className="text-sm sm:text-xl font-sf-light dark:text-white">
+                <li className="text-sm transition duration-200 sm:text-xl font-sf-light dark:text-white">
                   💼 Searching for internship...
                 </li>
-                <li className="text-sm sm:text-xl font-sf-light dark:text-white">
+                <li className="text-sm transition duration-200 sm:text-xl font-sf-light dark:text-white">
                   <a href="mailto:danderekma@gmail.com">
                     ✉️ danderekma@gmail.com
                   </a>
@@ -142,7 +142,7 @@ export default function Index(): React.ReactNode {
             </div>
           </div>
         </div>
-        <footer className="w-full pb-4 text-sm text-center sm:text-base font-sf-thin text-black/25 dark:text-white/25">
+        <footer className="w-full pb-4 text-sm text-center transition duration-200 sm:text-base font-sf-thin text-black/25 dark:text-white/25">
           Created with ❤️ by Derek Ma <br /> © 2022
         </footer>
       </main>
