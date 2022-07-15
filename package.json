@@ -13,12 +13,14 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "preload-fonts": "gatsby-preload-fonts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "gatsby": "^4.8.2",
     "gatsby-plugin-image": "^2.18.1",
     "gatsby-plugin-manifest": "^4.18.1",
+    "gatsby-plugin-preload-fonts": "^3.18.1",
     "gatsby-plugin-react-helmet": "^5.18.0",
     "gatsby-plugin-sharp": "^4.18.1",
     "gatsby-plugin-use-dark-mode": "^1.5.0",
