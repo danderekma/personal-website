@@ -29,7 +29,7 @@ export default function Index(): React.ReactNode {
         <meta charSet="utf-8" />
         <title>Derek Ma</title>
       </Helmet>
-      <main className="flex flex-col justify-between h-screen transition duration-200 bg-white bg-grid-lg-light dark:bg-grid-lg-dark dark:bg-gray">
+      <main className="flex flex-col justify-between min-h-screen transition duration-200 bg-white bg-grid-lg-light dark:bg-grid-lg-dark dark:bg-gray">
         <div className="flex justify-end w-full px-8 pt-6">
           <DarkModeToggle
             onChange={darkMode.toggle}
