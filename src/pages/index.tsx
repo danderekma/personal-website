@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 import useDarkMode from "use-dark-mode";
-import DarkModeToggle from "react-dark-mode-toggle";
+import { DarkModeToggle } from "react-dark-mode-toggle-2";
 
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -33,7 +33,7 @@ export default function Index(): React.ReactNode {
         <div className="flex justify-end w-full px-8 pt-6">
           <DarkModeToggle
             onChange={darkMode.toggle}
-            checked={darkMode.value}
+            isDarkMode={darkMode.value}
             size={"80px"}
           />
         </div>
