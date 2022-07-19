@@ -44,6 +44,8 @@ export default function Index(): React.ReactNode {
               alt="profile-pic-light.webp"
               className="w-56 sm:w-80 dark:hidden"
               imgClassName="rounded-full"
+              width={400}
+              height={400}
               placeholder="none"
             />
             <StaticImage
@@ -51,6 +53,8 @@ export default function Index(): React.ReactNode {
               alt="profile-pic-dark.webp"
               className="!hidden w-56 sm:w-80 dark:!inline"
               imgClassName="rounded-full"
+              width={500}
+              height={500}
               placeholder="none"
             />
           </div>
