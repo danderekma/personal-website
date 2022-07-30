@@ -57,10 +57,10 @@ export default function Index(): React.ReactNode {
           <div className="relative flex flex-col transition duration-200 justify-center gap-3 sm:gap-5 h-[250px] sm:h-[340px] bg-light-gray dark:bg-dark-gray bottom-7">
             <div className="flex flex-col items-center sm:gap-2">
               <h1 className="text-3xl transition duration-200 sm:text-5xl font-sf-bold dark:text-white">
-                👋 Hi, I’m Derek!
+                👋 Hi, I'm Derek!
               </h1>
               <h2 className="text-xl transition duration-200 sm:text-3xl font-sf-regular dark:text-white">
-                I’m a student developer at UC Davis.
+                I'm a student developer at UC Davis.
               </h2>
             </div>
             <div className="flex flex-col items-center">
