@@ -5,5 +5,5 @@ type Props = {
 };
 
 export default function CardGrid({ children }: Props) {
-    return <div>{children}</div>;
+    return <div className="grid justify-center">{children}</div>;
 }

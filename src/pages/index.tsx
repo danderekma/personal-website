@@ -18,6 +18,7 @@ import TwitterIconLight from "../assets/svgs/twitter-icon-light.svg";
 import TwitterIconDark from "../assets/svgs/twitter-icon-dark.svg";
 
 import CardGrid from "../components/projects/CardGrid";
+import Card from "../components/projects/Card";
 
 export default function Index(): React.ReactNode {
     const darkMode = useDarkMode(false, {
