@@ -3,9 +3,9 @@ import React from "react";
 type Props = {
     name: string;
     description: string;
-    image: HTMLImageElement;
+    image: React.ReactElement;
 };
 
 export default function Card({ name, description, image }: Props) {
-    return <div>Card</div>;
+    return <div className="bg-light-gray dark:bg-dark-gray">Card</div>;
 }

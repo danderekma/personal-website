@@ -16,6 +16,7 @@ import LinkedInIconLight from "../assets/svgs/linkedin-icon-light.svg";
 import LinkedInIconDark from "../assets/svgs/linkedin-icon-dark.svg";
 import TwitterIconLight from "../assets/svgs/twitter-icon-light.svg";
 import TwitterIconDark from "../assets/svgs/twitter-icon-dark.svg";
+import DownArrowLight from "../assets/svgs/down-arrow-light.svg";
 
 import CardGrid from "../components/projects/CardGrid";
 import Card from "../components/projects/Card";
@@ -33,14 +34,14 @@ export default function Index(): React.ReactNode {
                 <title>Derek Ma</title>
             </Helmet>
             <div className="grid min-h-screen">
-                <div className="flex justify-end w-full px-8 py-6 h-max justify-self-start">
+                <div className="flex self-start justify-end w-full px-8 py-6 h-max">
                     <DarkModeToggle
                         onChange={darkMode.toggle}
                         checked={darkMode.value}
                         size={"80px"}
                     />
                 </div>
-                <div className="w-full justify-self-center h-max">
+                <div className="self-center h-max">
                     <div className="relative z-10 flex justify-center">
                         <StaticImage
                             src="../assets/images/profile-pic-light.webp"
@@ -175,10 +176,27 @@ export default function Index(): React.ReactNode {
                         </div>
                     </div>
                 </div>
+                <div className="flex self-end justify-center py-6 h-max">
+                    <a href="#projects" className="scroll-smooth">
+                        <img src={DownArrowLight} alt="down-arrow-light.svg" />
+                    </a>
+                </div>
             </div>
-            <div>
+            <div className="px-96" id="projects">
+                <h1 className="py-6 text-2xl transition duration-200 sm:text-4xl font-sf-bold dark:text-white">
+                    Projects
+                </h1>
                 <CardGrid>
-                    <h1>Hello</h1>
+                    <Card
+                        name="AggieExplorer"
+                        description="A full-stack web application developed to provide grading distributions and enrollment statistics for UC Davis students."
+                        image={<img />}
+                    />
+                    <Card
+                        name="AggieExplorer"
+                        description="A full-stack web application developed to provide grading distributions and enrollment statistics for UC Davis students."
+                        image={<img />}
+                    />
                 </CardGrid>
             </div>
             <footer className="w-full pb-4 text-sm text-center transition duration-200 sm:text-base font-sf-thin text-black/25 dark:text-white/25">
