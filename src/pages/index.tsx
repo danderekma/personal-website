@@ -17,6 +17,8 @@ import LinkedInIconDark from "../assets/svgs/linkedin-icon-dark.svg";
 import TwitterIconLight from "../assets/svgs/twitter-icon-light.svg";
 import TwitterIconDark from "../assets/svgs/twitter-icon-dark.svg";
 
+import CardGrid from "../components/projects/CardGrid";
+
 export default function Index(): React.ReactNode {
     const darkMode = useDarkMode(false, {
         classNameDark: "dark",
@@ -24,20 +26,20 @@ export default function Index(): React.ReactNode {
     });
 
     return (
-        <>
+        <main className="transition duration-200 bg-white bg-repeat grid-col bg-grid-sm-light dark:bg-grid-sm-dark sm:bg-grid-lg-light sm:dark:bg-grid-lg-dark dark:bg-gray">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Derek Ma</title>
             </Helmet>
-            <main className="flex flex-col justify-between min-h-screen transition duration-200 bg-white bg-grid-sm-light dark:bg-grid-sm-dark sm:bg-grid-lg-light sm:dark:bg-grid-lg-dark dark:bg-gray">
-                <div className="flex justify-end w-full px-8 pt-6">
+            <div className="grid min-h-screen">
+                <div className="flex justify-end w-full px-8 py-6 h-max justify-self-start">
                     <DarkModeToggle
                         onChange={darkMode.toggle}
                         checked={darkMode.value}
                         size={"80px"}
                     />
                 </div>
-                <div>
+                <div className="w-full justify-self-center h-max">
                     <div className="relative z-10 flex justify-center">
                         <StaticImage
                             src="../assets/images/profile-pic-light.webp"
@@ -172,10 +174,15 @@ export default function Index(): React.ReactNode {
                         </div>
                     </div>
                 </div>
-                <footer className="w-full pb-4 text-sm text-center transition duration-200 sm:text-base font-sf-thin text-black/25 dark:text-white/25">
-                    Created with ❤️ by Derek Ma <br /> © 2022
-                </footer>
-            </main>
-        </>
+            </div>
+            <div>
+                <CardGrid>
+                    <h1>Hello</h1>
+                </CardGrid>
+            </div>
+            <footer className="w-full pb-4 text-sm text-center transition duration-200 sm:text-base font-sf-thin text-black/25 dark:text-white/25">
+                Created with ❤️ by Derek Ma <br /> © 2022
+            </footer>
+        </main>
     );
 }
