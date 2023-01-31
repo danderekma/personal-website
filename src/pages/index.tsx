@@ -182,7 +182,7 @@ export default function Index(): React.ReactNode {
                     </a>
                 </div>
             </div>
-            <div className="px-96" id="projects">
+            <div className="py-12 sm:py-24 px-[20%]" id="projects">
                 <h1 className="py-6 text-2xl transition duration-200 sm:text-4xl font-sf-bold dark:text-white">
                     Projects
                 </h1>
@@ -190,12 +190,32 @@ export default function Index(): React.ReactNode {
                     <Card
                         name="AggieExplorer"
                         description="A full-stack web application developed to provide grading distributions and enrollment statistics for UC Davis students."
-                        image={<img />}
+                        image={
+                            <StaticImage
+                                src="../assets/images/aggie-explorer.jpeg"
+                                alt="aggie-explorer.jpeg"
+                                className="w-full h-full lg:w-64 rounded-3xl"
+                                imgClassName="object-left"
+                                placeholder="none"
+                            />
+                        }
+                        redirect="Read More >"
+                        link="https://codelabdavis.medium.com/aggieexplorer-winter-spring-21-mentored-project-41c3f4f18a5"
                     />
                     <Card
-                        name="AggieExplorer"
-                        description="A full-stack web application developed to provide grading distributions and enrollment statistics for UC Davis students."
-                        image={<img />}
+                        name="UC Davis New Vietnam Studies Initiative"
+                        description="A landing page for the New Vienam Studies Initiative at UC Davis created with Next.js."
+                        image={
+                            <StaticImage
+                                src="../assets/images/nvsi.svg"
+                                alt="nvsi.svg"
+                                className="w-full h-full lg:w-64 rounded-3xl"
+                                imgClassName="object-right"
+                                placeholder="none"
+                            />
+                        }
+                        redirect="Visit >"
+                        link="https://newvietnam.ucdavis.edu"
                     />
                 </CardGrid>
             </div>
