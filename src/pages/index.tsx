@@ -194,8 +194,8 @@ export default function Index(): React.ReactNode {
                             <StaticImage
                                 src="../assets/images/aggie-explorer.jpeg"
                                 alt="aggie-explorer.jpeg"
-                                className="w-full h-full lg:w-64 rounded-3xl"
-                                imgClassName="object-left"
+                                className="w-full h-full lg:w-64"
+                                imgClassName="object-left rounded-3xl"
                                 placeholder="none"
                             />
                         }
@@ -209,8 +209,8 @@ export default function Index(): React.ReactNode {
                             <StaticImage
                                 src="../assets/images/nvsi.svg"
                                 alt="nvsi.svg"
-                                className="w-full h-full lg:w-64 rounded-3xl"
-                                imgClassName="object-right"
+                                className="w-full h-full lg:w-64"
+                                imgClassName="object-right rounded-3xl"
                                 placeholder="none"
                             />
                         }
