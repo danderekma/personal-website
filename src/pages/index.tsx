@@ -4,10 +4,12 @@ import { Helmet } from "react-helmet";
 import useDarkMode from "use-dark-mode";
 import DarkModeToggle from "react-dark-mode-toggle";
 
-import DownArrowLight from "../assets/svgs/down-arrow-light.svg";
+import { StaticImage } from "gatsby-plugin-image";
 
 import IconRow from "../components/welcome/IconRow";
 import Icon from "../components/welcome/Icon";
+
+import DownArrowLight from "../assets/svgs/down-arrow-light.svg";
 
 import CardGrid from "../components/projects/CardGrid";
 import Card from "../components/projects/Card";
@@ -34,20 +36,19 @@ export default function Index(): React.ReactNode {
                 </div>
                 <div className="self-center h-max">
                     <div className="relative z-10 flex justify-center">
-                        <img
-                            src={
-                                require(`../assets/images/profile-pic-${
-                                    darkMode.value ? "dark" : "light"
-                                }.webp`).default
-                            }
-                            alt={`profile-pic-${
-                                darkMode.value ? "dark" : "light"
-                            }.webp`}
-                            className={
-                                darkMode.value
-                                    ? "!hidden w-56 sm:w-80 dark:!inline rounded-full"
-                                    : "w-56 sm:w-80 dark:hidden rounded-full"
-                            }
+                        <StaticImage
+                            src="../assets/images/profile-pic-light.webp"
+                            alt="profile-pic-light.webp"
+                            className="w-56 sm:w-80 dark:hidden"
+                            imgClassName="rounded-full"
+                            placeholder="none"
+                        />
+                        <StaticImage
+                            src="../assets/images/profile-pic-dark.webp"
+                            alt="profile-pic-dark.webp"
+                            className="!hidden w-56 sm:w-80 dark:!inline"
+                            imgClassName="rounded-full"
+                            placeholder="none"
                         />
                     </div>
                     <div className="relative flex flex-col transition duration-200 justify-center gap-3 sm:gap-5 h-[250px] sm:h-[340px] bg-light-gray dark:bg-dark-gray bottom-7">
@@ -118,13 +119,12 @@ export default function Index(): React.ReactNode {
                         name="AggieExplorer"
                         description="A full-stack web application developed to provide grading distributions and enrollment statistics for UC Davis students."
                         image={
-                            <img
-                                src={
-                                    require("../assets/images/aggie-explorer.jpeg")
-                                        .default
-                                }
+                            <StaticImage
+                                src="../assets/images/aggie-explorer.jpeg"
                                 alt="aggie-explorer.jpeg"
-                                className="object-cover object-left h-full rounded-3xl lg:w-60"
+                                className="w-full h-full lg:w-64"
+                                imgClassName="object-left rounded-3xl"
+                                placeholder="none"
                             />
                         }
                         redirect="Read More >"
@@ -134,12 +134,12 @@ export default function Index(): React.ReactNode {
                         name="UC Davis New Vietnam Studies Initiative"
                         description="A landing page for the New Vienam Studies Initiative at UC Davis created with Next.js."
                         image={
-                            <img
-                                src={
-                                    require("../assets/images/nvsi.svg").default
-                                }
+                            <StaticImage
+                                src="../assets/images/nvsi.svg"
                                 alt="nvsi.svg"
-                                className="object-cover object-right h-full rounded-3xl lg:w-60"
+                                className="w-full h-full lg:w-64"
+                                imgClassName="object-right rounded-3xl"
+                                placeholder="none"
                             />
                         }
                         redirect="Visit >"
