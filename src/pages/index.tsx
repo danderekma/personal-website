@@ -4,19 +4,10 @@ import { Helmet } from "react-helmet";
 import useDarkMode from "use-dark-mode";
 import DarkModeToggle from "react-dark-mode-toggle";
 
-import { StaticImage } from "gatsby-plugin-image";
-
-import FacebookIconLight from "../assets/svgs/facebook-icon-light.svg";
-import FacebookIconDark from "../assets/svgs/facebook-icon-dark.svg";
-import InstagramIconLight from "../assets/svgs/instagram-icon-light.svg";
-import InstagramIconDark from "../assets/svgs/instagram-icon-dark.svg";
-import GithubIconLight from "../assets/svgs/github-icon-light.svg";
-import GithubIconDark from "../assets/svgs/github-icon-dark.svg";
-import LinkedInIconLight from "../assets/svgs/linkedin-icon-light.svg";
-import LinkedInIconDark from "../assets/svgs/linkedin-icon-dark.svg";
-import TwitterIconLight from "../assets/svgs/twitter-icon-light.svg";
-import TwitterIconDark from "../assets/svgs/twitter-icon-dark.svg";
 import DownArrowLight from "../assets/svgs/down-arrow-light.svg";
+
+import IconRow from "../components/welcome/IconRow";
+import Icon from "../components/welcome/Icon";
 
 import CardGrid from "../components/projects/CardGrid";
 import Card from "../components/projects/Card";
@@ -43,19 +34,20 @@ export default function Index(): React.ReactNode {
                 </div>
                 <div className="self-center h-max">
                     <div className="relative z-10 flex justify-center">
-                        <StaticImage
-                            src="../assets/images/profile-pic-light.webp"
-                            alt="profile-pic-light.webp"
-                            className="w-56 sm:w-80 dark:hidden"
-                            imgClassName="rounded-full"
-                            placeholder="none"
-                        />
-                        <StaticImage
-                            src="../assets/images/profile-pic-dark.webp"
-                            alt="profile-pic-dark.webp"
-                            className="!hidden w-56 sm:w-80 dark:!inline"
-                            imgClassName="rounded-full"
-                            placeholder="none"
+                        <img
+                            src={
+                                require(`../assets/images/profile-pic-${
+                                    darkMode.value ? "dark" : "light"
+                                }.webp`).default
+                            }
+                            alt={`profile-pic-${
+                                darkMode.value ? "dark" : "light"
+                            }.webp`}
+                            className={
+                                darkMode.value
+                                    ? "!hidden w-56 sm:w-80 dark:!inline rounded-full"
+                                    : "w-56 sm:w-80 dark:hidden rounded-full"
+                            }
                         />
                     </div>
                     <div className="relative flex flex-col transition duration-200 justify-center gap-3 sm:gap-5 h-[250px] sm:h-[340px] bg-light-gray dark:bg-dark-gray bottom-7">
@@ -82,98 +74,33 @@ export default function Index(): React.ReactNode {
                                 </li>
                             </ul>
                         </div>
-                        <div className="flex justify-center gap-3">
-                            <a
-                                href="https://www.facebook.com/profile.php?id=100010707514748"
-                                className="w-5 sm:w-6 dark:hidden"
-                            >
-                                <img
-                                    src={FacebookIconLight}
-                                    alt="facebook-icon-light.svg"
-                                />
-                            </a>
-                            <a
-                                href="https://www.facebook.com/profile.php?id=100010707514748"
-                                className="hidden w-5 sm:w-6 dark:inline"
-                            >
-                                <img
-                                    src={FacebookIconDark}
-                                    alt="facebook-icon-dark.svg"
-                                />
-                            </a>
-                            <a
-                                href="https://www.instagram.com/danderekma/"
-                                className="w-5 sm:w-6 dark:hidden"
-                            >
-                                <img
-                                    src={InstagramIconLight}
-                                    alt="instagram-icon-light.svg"
-                                />
-                            </a>
-                            <a
-                                href="https://www.instagram.com/danderekma/"
-                                className="hidden w-5 sm:w-6 dark:inline"
-                            >
-                                <img
-                                    src={InstagramIconDark}
-                                    alt="instagram-icon-dark.svg"
-                                />
-                            </a>
-                            <a
-                                href="https://github.com/danderekma"
-                                className="w-5 sm:w-6 dark:hidden"
-                            >
-                                <img
-                                    src={GithubIconLight}
-                                    alt="github-icon-light.svg"
-                                />
-                            </a>
-                            <a
-                                href="https://github.com/danderekma"
-                                className="hidden w-5 sm:w-6 dark:inline"
-                            >
-                                <img
-                                    src={GithubIconDark}
-                                    alt="github-icon-dark.svg"
-                                />
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/danderekma/"
-                                className="w-5 sm:w-6 dark:hidden"
-                            >
-                                <img
-                                    src={LinkedInIconLight}
-                                    alt="linkedin-icon-light.svg"
-                                />
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/danderekma/"
-                                className="hidden w-5 sm:w-6 dark:inline"
-                            >
-                                <img
-                                    src={LinkedInIconDark}
-                                    alt="linkedin-icon-dark.svg"
-                                />
-                            </a>
-                            <a
-                                href="https://twitter.com/danderekma"
-                                className="w-5 sm:w-6 dark:hidden"
-                            >
-                                <img
-                                    src={TwitterIconLight}
-                                    alt="twitter-icon-light.svg"
-                                />
-                            </a>
-                            <a
-                                href="https://twitter.com/danderekma"
-                                className="hidden w-5 sm:w-6 dark:inline"
-                            >
-                                <img
-                                    src={TwitterIconDark}
-                                    alt="twitter-icon-dark.svg"
-                                />
-                            </a>
-                        </div>
+                        <IconRow>
+                            <Icon
+                                name="facebook"
+                                link="https://www.facebook.com/profile.php?id=100010707514748"
+                                dark={darkMode.value}
+                            />
+                            <Icon
+                                name="instagram"
+                                link="https://www.instagram.com/danderekma/"
+                                dark={darkMode.value}
+                            />
+                            <Icon
+                                name="github"
+                                link="https://github.com/danderekma"
+                                dark={darkMode.value}
+                            />
+                            <Icon
+                                name="linkedin"
+                                link="https://www.linkedin.com/in/danderekma/"
+                                dark={darkMode.value}
+                            />
+                            <Icon
+                                name="twitter"
+                                link="https://twitter.com/danderekma"
+                                dark={darkMode.value}
+                            />
+                        </IconRow>
                     </div>
                 </div>
                 <div className="flex self-end justify-center py-6 h-max">
@@ -182,7 +109,7 @@ export default function Index(): React.ReactNode {
                     </a>
                 </div>
             </div>
-            <div className="py-12 sm:py-24 px-[20%]" id="projects">
+            <div className="py-12 px-[15%] sm:py-24 sm:px-[20%]" id="projects">
                 <h1 className="py-6 text-2xl transition duration-200 sm:text-4xl font-sf-bold dark:text-white">
                     Projects
                 </h1>
@@ -191,12 +118,13 @@ export default function Index(): React.ReactNode {
                         name="AggieExplorer"
                         description="A full-stack web application developed to provide grading distributions and enrollment statistics for UC Davis students."
                         image={
-                            <StaticImage
-                                src="../assets/images/aggie-explorer.jpeg"
+                            <img
+                                src={
+                                    require("../assets/images/aggie-explorer.jpeg")
+                                        .default
+                                }
                                 alt="aggie-explorer.jpeg"
-                                className="w-full h-full lg:w-64"
-                                imgClassName="object-left rounded-3xl"
-                                placeholder="none"
+                                className="object-cover object-left h-full rounded-3xl lg:w-60"
                             />
                         }
                         redirect="Read More >"
@@ -206,12 +134,12 @@ export default function Index(): React.ReactNode {
                         name="UC Davis New Vietnam Studies Initiative"
                         description="A landing page for the New Vienam Studies Initiative at UC Davis created with Next.js."
                         image={
-                            <StaticImage
-                                src="../assets/images/nvsi.svg"
+                            <img
+                                src={
+                                    require("../assets/images/nvsi.svg").default
+                                }
                                 alt="nvsi.svg"
-                                className="w-full h-full lg:w-64"
-                                imgClassName="object-right rounded-3xl"
-                                placeholder="none"
+                                className="object-cover object-right h-full rounded-3xl lg:w-60"
                             />
                         }
                         redirect="Visit >"
