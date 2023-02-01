@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
 import { StaticImage } from "gatsby-plugin-image";
+
 import { DarkModeToggle } from "react-dark-mode-toggle-2";
 
 import IconRow from "../components/welcome/IconRow";
@@ -12,7 +13,14 @@ import Card from "../components/projects/Card";
 import DownArrowLight from "../assets/svgs/down-arrow-light.svg";
 
 export default function Index(): React.ReactNode {
-    const [isDark, setDark] = useState(false);
+    const [isDark, setDark] = useState(
+        localStorage.getItem("theme") === "dark" ? true : false
+    );
+
+    useEffect(() => {
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        document.body.className = isDark ? "dark" : "light";
+    }, [isDark]);
 
     return (
         <main className="transition duration-200 bg-white bg-repeat grid-col bg-grid-sm-light dark:bg-grid-sm-dark sm:bg-grid-lg-light sm:dark:bg-grid-lg-dark dark:bg-gray">
