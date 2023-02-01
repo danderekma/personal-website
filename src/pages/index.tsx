@@ -1,24 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 
-import useDarkMode from "use-dark-mode";
-import DarkModeToggle from "react-dark-mode-toggle";
-
 import { StaticImage } from "gatsby-plugin-image";
+import { DarkModeToggle } from "react-dark-mode-toggle-2";
 
 import IconRow from "../components/welcome/IconRow";
 import Icon from "../components/welcome/Icon";
-
-import DownArrowLight from "../assets/svgs/down-arrow-light.svg";
-
 import CardGrid from "../components/projects/CardGrid";
 import Card from "../components/projects/Card";
 
+import DownArrowLight from "../assets/svgs/down-arrow-light.svg";
+
 export default function Index(): React.ReactNode {
-    const darkMode = useDarkMode(false, {
-        classNameDark: "dark",
-        classNameLight: "light"
-    });
+    const [isDark, setDark] = useState(false);
 
     return (
         <main className="transition duration-200 bg-white bg-repeat grid-col bg-grid-sm-light dark:bg-grid-sm-dark sm:bg-grid-lg-light sm:dark:bg-grid-lg-dark dark:bg-gray">
@@ -28,11 +22,7 @@ export default function Index(): React.ReactNode {
             </Helmet>
             <div className="grid min-h-screen">
                 <div className="flex self-start justify-end w-full px-8 py-6 h-max">
-                    <DarkModeToggle
-                        onChange={darkMode.toggle}
-                        checked={darkMode.value}
-                        size={"80px"}
-                    />
+                    <DarkModeToggle isDarkMode={isDark} onChange={setDark} />
                 </div>
                 <div className="self-center h-max">
                     <div className="relative z-10 flex justify-center">
@@ -79,27 +69,27 @@ export default function Index(): React.ReactNode {
                             <Icon
                                 name="facebook"
                                 link="https://www.facebook.com/profile.php?id=100010707514748"
-                                dark={darkMode.value}
+                                dark={isDark}
                             />
                             <Icon
                                 name="instagram"
                                 link="https://www.instagram.com/danderekma/"
-                                dark={darkMode.value}
+                                dark={isDark}
                             />
                             <Icon
                                 name="github"
                                 link="https://github.com/danderekma"
-                                dark={darkMode.value}
+                                dark={isDark}
                             />
                             <Icon
                                 name="linkedin"
                                 link="https://www.linkedin.com/in/danderekma/"
-                                dark={darkMode.value}
+                                dark={isDark}
                             />
                             <Icon
                                 name="twitter"
                                 link="https://twitter.com/danderekma"
-                                dark={darkMode.value}
+                                dark={isDark}
                             />
                         </IconRow>
                     </div>

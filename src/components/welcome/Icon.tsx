@@ -10,7 +10,7 @@ export default function Icon({ name, link, dark }: Props) {
     return (
         <>
             {dark ? (
-                <a href={link} className="hidden w-5 sm:w-6 dark:inline">
+                <a href={link} className="w-5 sm:w-6">
                     <img
                         src={
                             require(`../../assets/svgs/${name}-icon-dark.svg`)
@@ -20,7 +20,7 @@ export default function Icon({ name, link, dark }: Props) {
                     />
                 </a>
             ) : (
-                <a href={link} className="w-5 sm:w-6 dark:hidden">
+                <a href={link} className="w-5 sm:w-6">
                     <img
                         src={
                             require(`../../assets/svgs/${name}-icon-light.svg`)
