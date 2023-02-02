@@ -4,19 +4,15 @@ import { Helmet } from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
-import { DarkModeToggle } from "react-dark-mode-toggle-2";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 import IconRow from "../components/welcome/IconRow";
 import Icon from "../components/welcome/Icon";
 import CardGrid from "../components/projects/CardGrid";
 import Card from "../components/projects/Card";
 
-import DownArrowLight from "../assets/svgs/down-arrow-light.svg";
-
 export default function Index(): React.ReactNode {
-    const [isDark, setDark] = useState(
-        localStorage.getItem("theme") === "dark" ? true : false
-    );
+    const [isDark, setDark] = useState(false);
 
     const { profilePicLight, profilePicDark } = useStaticQuery(graphql`
         query Images {
@@ -38,6 +34,10 @@ export default function Index(): React.ReactNode {
     `);
 
     useEffect(() => {
+        setDark(localStorage.getItem("theme") === "dark" ? true : false);
+    }, []);
+
+    useEffect(() => {
         localStorage.setItem("theme", isDark ? "dark" : "light");
         document.body.className = isDark ? "dark" : "light";
     }, [isDark]);
@@ -50,7 +50,7 @@ export default function Index(): React.ReactNode {
             </Helmet>
             <div className="grid min-h-screen">
                 <div className="flex self-start justify-end w-full px-8 py-6 h-max">
-                    <DarkModeToggle isDarkMode={isDark} onChange={setDark} />
+                    <DarkModeToggle checked={isDark} onChange={setDark} />
                 </div>
                 <div className="self-center h-max">
                     <div className="relative z-10 flex justify-center">
@@ -124,7 +124,13 @@ export default function Index(): React.ReactNode {
                 </div>
                 <div className="flex self-end justify-center py-6 h-max">
                     <a href="#projects" className="scroll-smooth">
-                        <img src={DownArrowLight} alt="down-arrow-light.svg" />
+                        <img
+                            src={
+                                require("../assets/svgs/down-arrow-light.svg")
+                                    .default
+                            }
+                            alt="down-arrow-light.svg"
+                        />
                     </a>
                 </div>
             </div>
