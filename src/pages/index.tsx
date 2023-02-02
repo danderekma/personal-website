@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
-import { graphql } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
 import { DarkModeToggle } from "react-dark-mode-toggle-2";
@@ -13,7 +13,9 @@ import Card from "../components/projects/Card";
 
 import DownArrowLight from "../assets/svgs/down-arrow-light.svg";
 
-export default function Index({ data }): React.ReactNode {
+export default function Index({
+    data
+}: PageProps<Queries.ImagesQuery>): React.ReactNode {
     const [isDark, setDark] = useState(
         localStorage.getItem("theme") === "dark" ? true : false
     );
