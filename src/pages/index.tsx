@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
-import { StaticImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
 import { DarkModeToggle } from "react-dark-mode-toggle-2";
 
@@ -12,10 +13,13 @@ import Card from "../components/projects/Card";
 
 import DownArrowLight from "../assets/svgs/down-arrow-light.svg";
 
-export default function Index(): React.ReactNode {
+export default function Index({ data }): React.ReactNode {
     const [isDark, setDark] = useState(
         localStorage.getItem("theme") === "dark" ? true : false
     );
+
+    const profilePicLight = getImage(data.profilePicLight);
+    const profilePicDark = getImage(data.profilePicDark);
 
     useEffect(() => {
         localStorage.setItem("theme", isDark ? "dark" : "light");
@@ -34,19 +38,13 @@ export default function Index(): React.ReactNode {
                 </div>
                 <div className="self-center h-max">
                     <div className="relative z-10 flex justify-center">
-                        <StaticImage
-                            src="../assets/images/profile-pic-light.webp"
-                            alt="profile-pic-light.webp"
-                            className="w-56 sm:w-80 dark:hidden"
+                        <GatsbyImage
+                            image={isDark ? profilePicDark : profilePicLight}
+                            alt={`profile-pic-${
+                                isDark ? "dark" : "light"
+                            }.webp`}
+                            className="w-56 sm:w-80"
                             imgClassName="rounded-full"
-                            placeholder="none"
-                        />
-                        <StaticImage
-                            src="../assets/images/profile-pic-dark.webp"
-                            alt="profile-pic-dark.webp"
-                            className="!hidden w-56 sm:w-80 dark:!inline"
-                            imgClassName="rounded-full"
-                            placeholder="none"
                         />
                     </div>
                     <div className="relative flex flex-col transition duration-200 justify-center gap-3 sm:gap-5 h-[250px] sm:h-[340px] bg-light-gray dark:bg-dark-gray bottom-7">
@@ -151,3 +149,18 @@ export default function Index(): React.ReactNode {
         </main>
     );
 }
+
+export const imageQuery = graphql`
+    query Images {
+        profilePicLight: file(relativePath: { eq: "profile-pic-light.webp" }) {
+            childImageSharp {
+                gatsbyImageData(placeholder: NONE)
+            }
+        }
+        profilePicDark: file(relativePath: { eq: "profile-pic-dark.webp" }) {
+            childImageSharp {
+                gatsbyImageData(placeholder: NONE)
+            }
+        }
+    }
+`;
