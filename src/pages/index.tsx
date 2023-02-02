@@ -34,11 +34,6 @@ export default function Index(): React.ReactNode {
     `);
 
     useEffect(() => {
-        setDark(localStorage.getItem("theme") === "dark" ? true : false);
-    }, []);
-
-    useEffect(() => {
-        localStorage.setItem("theme", isDark ? "dark" : "light");
         document.body.className = isDark ? "dark" : "light";
     }, [isDark]);
 
