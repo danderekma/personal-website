@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
-import { graphql, PageProps } from "gatsby";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { graphql, useStaticQuery } from "gatsby";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
 import { DarkModeToggle } from "react-dark-mode-toggle-2";
 
@@ -13,15 +13,29 @@ import Card from "../components/projects/Card";
 
 import DownArrowLight from "../assets/svgs/down-arrow-light.svg";
 
-export default function Index({
-    data
-}: PageProps<Queries.ImagesQuery>): React.ReactNode {
+export default function Index(): React.ReactNode {
     const [isDark, setDark] = useState(
         localStorage.getItem("theme") === "dark" ? true : false
     );
 
-    const profilePicLight = getImage(data.profilePicLight);
-    const profilePicDark = getImage(data.profilePicDark);
+    const { profilePicLight, profilePicDark } = useStaticQuery(graphql`
+        query Images {
+            profilePicLight: file(
+                relativePath: { eq: "profile-pic-light.webp" }
+            ) {
+                childImageSharp {
+                    gatsbyImageData(placeholder: NONE)
+                }
+            }
+            profilePicDark: file(
+                relativePath: { eq: "profile-pic-dark.webp" }
+            ) {
+                childImageSharp {
+                    gatsbyImageData(placeholder: NONE)
+                }
+            }
+        }
+    `);
 
     useEffect(() => {
         localStorage.setItem("theme", isDark ? "dark" : "light");
@@ -41,7 +55,13 @@ export default function Index({
                 <div className="self-center h-max">
                     <div className="relative z-10 flex justify-center">
                         <GatsbyImage
-                            image={isDark ? profilePicDark : profilePicLight}
+                            image={
+                                isDark
+                                    ? profilePicDark.childImageSharp
+                                          .gatsbyImageData
+                                    : profilePicLight.childImageSharp
+                                          .gatsbyImageData
+                            }
                             alt={`profile-pic-${
                                 isDark ? "dark" : "light"
                             }.webp`}
@@ -151,18 +171,3 @@ export default function Index({
         </main>
     );
 }
-
-export const imageQuery = graphql`
-    query Images {
-        profilePicLight: file(relativePath: { eq: "profile-pic-light.webp" }) {
-            childImageSharp {
-                gatsbyImageData(placeholder: NONE)
-            }
-        }
-        profilePicDark: file(relativePath: { eq: "profile-pic-dark.webp" }) {
-            childImageSharp {
-                gatsbyImageData(placeholder: NONE)
-            }
-        }
-    }
-`;

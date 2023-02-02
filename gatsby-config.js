@@ -1,6 +1,5 @@
 /** @type {import('gatsby').GatsbyConfig} */
 module.exports = {
-    graphqlTypegen: true,
     plugins: [
         "gatsby-plugin-postcss",
         "gatsby-plugin-react-helmet",
