@@ -16,7 +16,7 @@ export default function Card({
     redirect
 }: Props) {
     return (
-        <div className="flex flex-col rounded-3xl bg-light-gray dark:bg-dark-gray lg:h-auto lg:flex-row lg:min-w-[36rem]">
+        <div className="flex flex-col rounded-3xl bg-light-gray dark:bg-dark-gray lg:h-auto lg:flex-row lg:min-w-[36rem] lg:min-h-[18rem]">
             <div>{image}</div>
             <div className="flex flex-col justify-center h-full p-8 sm:p-12">
                 <h1 className="pb-2 text-xl transition duration-200 sm:text-3xl font-sf-bold dark:text-white">
