@@ -1,5 +1,8 @@
 /** @type {import('gatsby').GatsbyConfig} */
 module.exports = {
+    flags: {
+        DEV_SSR: true
+    },
     plugins: [
         "gatsby-plugin-postcss",
         "gatsby-plugin-react-helmet",
