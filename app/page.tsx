@@ -1,91 +1,159 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import { useState, useEffect } from "react";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+import { useTheme } from "next-themes";
+import Image from "next/image";
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+import DarkModeToggle from "react-dark-mode-toggle";
+import IconRow from "../components/welcome/IconRow";
+import Icon from "../components/welcome/Icon";
+import CardGrid from "../components/projects/CardGrid";
+import Card from "../components/projects/Card";
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+export default function Home(): React.ReactNode {
+    const [mounted, setMounted] = useState(false);
+    const { resolvedTheme, setTheme } = useTheme();
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    if (!mounted) {
+        return null;
+    }
+
+    return (
+        <main className="bg-white bg-repeat transition-all-all grid-col bg-grid-sm-light dark:bg-grid-sm-dark sm:bg-grid-lg-light sm:dark:bg-grid-lg-dark dark:bg-gray">
+            <div className="grid min-h-screen">
+                <div className="flex self-start justify-end w-full px-8 py-6 h-max">
+                    <DarkModeToggle
+                        checked={resolvedTheme === "dark"}
+                        onChange={() => {
+                            setTheme(
+                                resolvedTheme === "dark" ? "light" : "dark"
+                            );
+                        }}
+                    />
+                </div>
+                <div className="self-center h-max">
+                    <div className="relative z-10 flex justify-center">
+                        <Image
+                            src={
+                                resolvedTheme === "dark"
+                                    ? "/images/profile-pic-dark.webp"
+                                    : "/images/profile-pic-light.webp"
+                            }
+                            width={2000}
+                            height={2000}
+                            alt={`profile-pic-${resolvedTheme}.webp`}
+                            className="w-56 rounded-full sm:w-80"
+                        />
+                    </div>
+                    <div className="relative flex flex-col transition-all justify-center gap-3 sm:gap-5 h-[250px] sm:h-[340px] bg-light-gray dark:bg-dark-gray bottom-7">
+                        <div className="flex flex-col items-center sm:gap-2">
+                            <h1 className="text-3xl transition-all sm:text-5xl font-sf-bold dark:text-white">
+                                👋 Hi, I'm Derek!
+                            </h1>
+                            <h2 className="text-xl transition-all sm:text-3xl font-sf-regular dark:text-white">
+                                I'm a student developer at UC Davis.
+                            </h2>
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <ul className="list-none">
+                                <li className="text-sm transition-all sm:text-xl font-sf-light dark:text-white">
+                                    ☕️ Fueled by coffee
+                                </li>
+                                <li className="text-sm transition-all sm:text-xl font-sf-light dark:text-white">
+                                    💼 Searching for internship...
+                                </li>
+                                <li className="text-sm transition-all sm:text-xl font-sf-light dark:text-white">
+                                    <a href="mailto:danderekma@gmail.com">
+                                        ✉️ danderekma@gmail.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <IconRow>
+                            <Icon
+                                name="facebook"
+                                link="https://www.facebook.com/profile.php?id=100010707514748"
+                                dark={resolvedTheme === "dark"}
+                            />
+                            <Icon
+                                name="instagram"
+                                link="https://www.instagram.com/danderekma/"
+                                dark={resolvedTheme === "dark"}
+                            />
+                            <Icon
+                                name="github"
+                                link="https://github.com/danderekma"
+                                dark={resolvedTheme === "dark"}
+                            />
+                            <Icon
+                                name="linkedin"
+                                link="https://www.linkedin.com/in/danderekma/"
+                                dark={resolvedTheme === "dark"}
+                            />
+                            <Icon
+                                name="twitter"
+                                link="https://twitter.com/danderekma"
+                                dark={resolvedTheme === "dark"}
+                            />
+                        </IconRow>
+                    </div>
+                </div>
+                <div className="flex self-end justify-center py-6 h-max">
+                    <a href="#projects">
+                        <Image
+                            src="/svgs/down-arrow-light.svg"
+                            alt="down-arrow-light.svg"
+                            width={50}
+                            height={50}
+                        />
+                    </a>
+                </div>
+            </div>
+            <div className="py-12 px-[15%] sm:py-24 sm:px-[20%]" id="projects">
+                <h1 className="py-6 text-2xl transition-all sm:text-4xl font-sf-bold dark:text-white">
+                    Projects
+                </h1>
+                <CardGrid>
+                    <Card
+                        name="AggieExplorer"
+                        description="A full-stack web application developed to provide grading distributions and enrollment statistics for UC Davis students."
+                        image={
+                            <Image
+                                src="/images/aggie-explorer.jpeg"
+                                alt="aggie-explorer.jpeg"
+                                className="object-cover object-left w-full h-full rounded-3xl"
+                                width={3024}
+                                height={1673}
+                            />
+                        }
+                        redirect="Read More >"
+                        link="https://codelabdavis.medium.com/aggieexplorer-winter-spring-21-mentored-project-41c3f4f18a5"
+                    />
+                    <Card
+                        name="UC Davis New Vietnam Studies Initiative"
+                        description="A landing page for the New Vietnam Studies Initiative at UC Davis created with Next.js."
+                        image={
+                            <Image
+                                src="/images/nvsi.svg"
+                                alt="nvsi.svg"
+                                className="object-cover object-right w-full h-full rounded-3xl"
+                                width={3024}
+                                height={1673}
+                            />
+                        }
+                        redirect="Visit >"
+                        link="https://newvietnam.ucdavis.edu"
+                    />
+                </CardGrid>
+            </div>
+            <footer className="w-full pb-4 text-sm text-center transition-all sm:text-base font-sf-thin text-black/25 dark:text-white/25">
+                Created with ❤️ by Derek Ma <br /> © 2022
+            </footer>
+        </main>
+    );
 }
