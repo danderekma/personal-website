@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
-import DarkModeToggle from "react-dark-mode-toggle";
+import { DarkModeToggle } from "react-dark-mode-toggle-2";
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
 
 import IconRow from "../components/welcome/IconRow";
 import Icon from "../components/welcome/Icon";
@@ -12,7 +13,7 @@ import CardGrid from "../components/projects/CardGrid";
 import Card from "../components/projects/Card";
 
 export default function Index(): React.ReactNode {
-    const [isDark, setDark] = useState(false);
+    const [isDark, setDark] = useState(document.body.className === "dark");
 
     const { profilePicLight, profilePicDark } = useStaticQuery(graphql`
         query Images {
@@ -33,10 +34,6 @@ export default function Index(): React.ReactNode {
         }
     `);
 
-    useEffect(() => {
-        document.body.className = isDark ? "dark" : "light";
-    }, [isDark]);
-
     return (
         <main className="transition duration-200 bg-white bg-repeat grid-col bg-grid-sm-light dark:bg-grid-sm-dark sm:bg-grid-lg-light sm:dark:bg-grid-lg-dark dark:bg-gray">
             <Helmet>
@@ -45,7 +42,25 @@ export default function Index(): React.ReactNode {
             </Helmet>
             <div className="grid min-h-screen">
                 <div className="flex self-start justify-end w-full px-8 py-6 h-max">
-                    <DarkModeToggle checked={isDark} onChange={setDark} />
+                    <ThemeToggler>
+                        {({
+                            theme,
+                            toggleTheme
+                        }: {
+                            theme: String;
+                            toggleTheme: Function;
+                        }) => (
+                            <DarkModeToggle
+                                isDarkMode={isDark}
+                                onChange={() => {
+                                    toggleTheme(
+                                        theme === "dark" ? "light" : "dark"
+                                    );
+                                    setDark(theme !== "dark");
+                                }}
+                            />
+                        )}
+                    </ThemeToggler>
                 </div>
                 <div className="self-center h-max">
                     <div className="relative z-10 flex justify-center">
