@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -8,10 +10,10 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                "grid-lg-light": "url('./public/svgs/bg-grid-lg-light.svg')",
-                "grid-lg-dark": "url('./public/svgs/bg-grid-lg-dark.svg')",
-                "grid-sm-light": "url('./public/svgs/bg-grid-sm-light.svg')",
-                "grid-sm-dark": "url('./public/svgs/bg-grid-sm-dark.svg')"
+                "grid-lg-light": "url('/svgs/bg-grid-lg-light.svg')",
+                "grid-lg-dark": "url('/svgs/bg-grid-lg-dark.svg')",
+                "grid-sm-light": "url('/svgs/bg-grid-sm-light.svg')",
+                "grid-sm-dark": "url('/svgs/bg-grid-sm-dark.svg')"
             },
             fontFamily: {
                 "sf-bold": [
