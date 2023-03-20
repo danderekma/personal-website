@@ -131,7 +131,6 @@ export default function Home(): React.ReactNode {
                                 height={1673}
                             />
                         }
-                        redirect="Read More >"
                         link="https://codelabdavis.medium.com/aggieexplorer-winter-spring-21-mentored-project-41c3f4f18a5"
                     />
                     <Card
@@ -146,7 +145,6 @@ export default function Home(): React.ReactNode {
                                 height={1673}
                             />
                         }
-                        redirect="Visit >"
                         link="https://newvietnam.ucdavis.edu"
                     />
                 </CardGrid>
