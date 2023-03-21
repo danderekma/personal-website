@@ -24,7 +24,7 @@ export default function Home(): React.ReactNode {
     }
 
     return (
-        <main className="transition-all bg-white bg-repeat bg-grid-sm-light dark:bg-grid-sm-dark sm:bg-grid-lg-light sm:dark:bg-grid-lg-dark dark:bg-gray">
+        <main className="transition-all bg-fixed bg-white bg-repeat bg-grid-sm-light dark:bg-grid-sm-dark sm:bg-grid-lg-light sm:dark:bg-grid-lg-dark dark:bg-gray">
             <div className="grid min-h-screen">
                 <div className="flex self-start justify-end w-full px-8 py-6 h-max">
                     <DarkModeToggle
