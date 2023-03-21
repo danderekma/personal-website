@@ -131,7 +131,7 @@ export default function Home(): React.ReactNode {
                                 height={1673}
                             />
                         }
-                        link="https://codelabdavis.medium.com/aggieexplorer-winter-spring-21-mentored-project-41c3f4f18a5"
+                        link="https://codelabdavis.medium.com/aggieexplorer-605c9d67965c"
                     />
                     <Card
                         name="UC Davis New Vietnam Studies Initiative"
