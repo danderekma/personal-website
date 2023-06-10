@@ -50,7 +50,7 @@ export default function Home(): React.ReactNode {
                             className="w-56 rounded-full sm:w-80"
                         />
                     </div>
-                    <div className="relative flex flex-col justify-center h-64 gap-3 transition-all sm:gap-5 sm:h-80 bg-light-gray dark:bg-dark-gray bottom-7">
+                    <div className="relative flex flex-col justify-center gap-3 transition-all h-72 sm:gap-5 sm:h-[22rem] bg-light-gray dark:bg-dark-gray bottom-7">
                         <div className="flex flex-col items-center sm:gap-2">
                             <h1 className="text-3xl transition-all duration-100 sm:text-5xl font-sf-bold dark:text-white">
                                 👋 Hi, I&apos;m Derek!
@@ -59,13 +59,16 @@ export default function Home(): React.ReactNode {
                                 I&apos;m a student developer at UC Davis.
                             </h2>
                         </div>
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center text-center">
                             <ul className="list-none">
                                 <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
-                                    ☕️ Fueled by coffee
+                                    🌟 Mobile/Web Development
                                 </li>
                                 <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
-                                    💼 Searching for internship...
+                                    🏫 Computer Science at UC Davis
+                                </li>
+                                <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
+                                    💼 Frontend Developer at GBCS Group
                                 </li>
                                 <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
                                     <a href="mailto:danderekma@gmail.com">
@@ -150,7 +153,7 @@ export default function Home(): React.ReactNode {
                 </CardGrid>
             </div>
             <footer className="w-full pb-4 text-sm text-center transition-all duration-100 sm:text-base font-sf-thin text-black/25 dark:text-white/25">
-                Created with ❤️ by Derek Ma <br /> © 2022
+                Created with ❤️ by Derek Ma <br /> © 2023
             </footer>
         </main>
     );
