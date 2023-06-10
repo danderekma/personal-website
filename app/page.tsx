@@ -11,7 +11,7 @@ import Icon from "../components/welcome/Icon";
 import CardGrid from "../components/projects/CardGrid";
 import Card from "../components/projects/Card";
 
-export default function Home(): React.ReactNode {
+export default function Home() {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme, setTheme } = useTheme();
 

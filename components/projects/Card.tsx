@@ -1,7 +1,7 @@
 type Props = {
     name: string;
     description: string;
-    image: React.ReactElement;
+    image: React.ReactNode;
     link: string;
 };
 
