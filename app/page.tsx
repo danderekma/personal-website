@@ -25,7 +25,7 @@ export default function Home() {
 
     return (
         <main className="transition-all bg-fixed bg-white bg-repeat bg-grid-sm-light dark:bg-grid-sm-dark sm:bg-grid-lg-light sm:dark:bg-grid-lg-dark dark:bg-gray">
-            <div className="grid min-h-screen">
+            <div className="grid min-h-screen" id="welcome">
                 <div className="flex self-start justify-end w-full px-8 py-6 h-max">
                     <DarkModeToggle
                         checked={resolvedTheme === "dark"}
@@ -151,6 +151,14 @@ export default function Home() {
                         link="https://newvietnam.ucdavis.edu"
                     />
                 </CardGrid>
+            </div>
+            <div
+                className="py-12 px-[15%] sm:py-24 sm:px-[20%]"
+                id="contactForm"
+            >
+                <h1 className="py-6 text-2xl transition-all duration-100 sm:text-4xl font-sf-bold dark:text-white">
+                    Contact Me
+                </h1>
             </div>
             <footer className="w-full pb-4 text-sm text-center transition-all duration-100 sm:text-base font-sf-thin text-black/25 dark:text-white/25">
                 Created with ❤️ by Derek Ma <br /> © 2023
