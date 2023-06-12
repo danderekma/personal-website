@@ -64,16 +64,16 @@ export default function Home() {
                         </div>
                         <div className="flex flex-col items-center text-center">
                             <ul className="list-none">
-                                <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
+                                <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-neutral-400">
                                     🌟 Web/Mobile Development
                                 </li>
-                                <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
+                                <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-neutral-400">
                                     🏫 Computer Science at UC Davis
                                 </li>
-                                <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
+                                <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-neutral-400">
                                     💼 Frontend Developer Intern at GBCS Group
                                 </li>
-                                <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
+                                <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-neutral-400">
                                     <a href="mailto:danderekma@gmail.com">
                                         ✉️ danderekma@gmail.com
                                     </a>

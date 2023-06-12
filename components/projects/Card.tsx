@@ -15,7 +15,7 @@ export default function Card({ name, description, image, link }: Props) {
                 <h1 className="pb-2 text-xl transition-all duration-100 sm:text-3xl font-sf-bold dark:text-white">
                     {name}
                 </h1>
-                <p className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
+                <p className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-neutral-400">
                     {description}
                 </p>
             </div>
