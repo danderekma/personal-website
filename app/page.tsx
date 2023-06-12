@@ -25,7 +25,10 @@ export default function Home() {
 
     return (
         <main className="transition-all bg-fixed bg-white bg-repeat bg-grid-sm-light dark:bg-grid-sm-dark sm:bg-grid-lg-light sm:dark:bg-grid-lg-dark dark:bg-gray">
-            <div className="grid min-h-screen" id="welcome">
+            <div
+                className="flex flex-col justify-between min-h-screen"
+                id="welcome"
+            >
                 <div className="flex self-start justify-end w-full px-8 py-6 h-max">
                     <DarkModeToggle
                         checked={resolvedTheme === "dark"}
@@ -36,7 +39,7 @@ export default function Home() {
                         }}
                     />
                 </div>
-                <div className="self-center h-max">
+                <div>
                     <div className="relative z-10 flex justify-center">
                         <Image
                             src={
@@ -62,13 +65,13 @@ export default function Home() {
                         <div className="flex flex-col items-center text-center">
                             <ul className="list-none">
                                 <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
-                                    🌟 Mobile/Web Development
+                                    🌟 Web/Mobile Development
                                 </li>
                                 <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
                                     🏫 Computer Science at UC Davis
                                 </li>
                                 <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
-                                    💼 Frontend Developer at GBCS Group
+                                    💼 Frontend Developer Intern at GBCS Group
                                 </li>
                                 <li className="text-sm transition-all duration-100 sm:text-xl font-sf-light dark:text-white">
                                     <a href="mailto:danderekma@gmail.com">
@@ -106,7 +109,7 @@ export default function Home() {
                         </IconRow>
                     </div>
                 </div>
-                <div className="flex self-end justify-center py-6 h-max">
+                <div className="flex justify-center py-6 h-max">
                     <a href="#projects">
                         <Image
                             src="/svgs/down-arrow-light.svg"
@@ -160,7 +163,7 @@ export default function Home() {
                     Contact Me
                 </h1>
             </div>
-            <footer className="w-full pb-4 text-sm text-center transition-all duration-100 sm:text-base font-sf-thin text-black/25 dark:text-white/25">
+            <footer className="w-full p-4 text-sm text-center transition-all duration-100 sm:text-base font-sf-thin text-black/25 dark:text-white/25">
                 Created with ❤️ by Derek Ma <br /> © 2023
             </footer>
         </main>
