@@ -5,7 +5,7 @@ import Image from "next/image";
 import CardGrid from "./CardGrid";
 import Card from "./Card";
 
-export default function index() {
+export default function Projects() {
     return (
         <div className="py-12 px-[15%] sm:py-24 sm:px-[20%]" id="projects">
             <h1 className="py-6 font-sf-bold text-2xl transition-all duration-100 dark:text-white sm:text-4xl">

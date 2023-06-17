@@ -1,6 +1,6 @@
-import Welcome from "@welcome";
-import Projects from "@projects";
-import Contact from "@contact";
+import Welcome from "@/components/welcome";
+import Projects from "@/components/projects";
+import Contact from "@/components/contact";
 
 export default function Home() {
     return (
