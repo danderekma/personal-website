@@ -1,9 +1,9 @@
-type Props = {
+interface Props {
     name: string;
     description: string;
     image: React.ReactNode;
     link: string;
-};
+}
 
 export default function Card({ name, description, image, link }: Props) {
     return (

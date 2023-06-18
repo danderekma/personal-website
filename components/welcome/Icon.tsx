@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-type Props = {
+interface Props {
     name: string;
     link: string;
     dark: boolean;
-};
+}
 
 export default function Icon({ name, link, dark }: Props) {
     return (

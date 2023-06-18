@@ -1,5 +1,3 @@
-"use client";
-
 export default function Contact() {
     return (
         <div className="py-12 px-[15%] sm:py-24 sm:px-[20%]" id="contact">
