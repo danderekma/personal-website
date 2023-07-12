@@ -7,7 +7,7 @@ interface Props {
 
 export default function Card({ name, description, image, link }: Props) {
   return (
-    <div className="flex flex-col rounded-3xl bg-light-gray dark:bg-dark-gray lg:min-h-[18rem] lg:min-w-[32rem] lg:flex-row">
+    <div className="flex flex-col rounded-3xl bg-light-gray dark:bg-dark-gray lg:min-h-[18rem] lg:flex-row">
       <a href={link} className="lg:w-1/3">
         {image}
       </a>

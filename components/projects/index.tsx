@@ -5,7 +5,10 @@ import Card from "./Card";
 
 export default function Projects() {
   return (
-    <div className="mx-auto max-w-screen-2xl py-12 sm:py-24" id="projects">
+    <div
+      className="py-12 px-[15%] sm:py-24 sm:px-[20%] xl:mx-auto xl:max-w-screen-xl xl:p-0"
+      id="projects"
+    >
       <h1 className="py-6 font-sf-bold text-2xl transition-all duration-100 dark:text-white sm:text-4xl">
         Projects
       </h1>
@@ -46,7 +49,7 @@ export default function Projects() {
               <Image
                 src="/images/training-tool-cow.svg"
                 alt="training-tool-cow.svg"
-                className="h-[75%] w-auto rounded-3xl object-cover"
+                className="h-[60%] w-auto rounded-3xl object-cover"
                 width={3024}
                 height={1673}
               />
