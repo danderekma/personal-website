@@ -15,7 +15,7 @@ export default function Contact() {
             First Name
           </label>
           <input
-            className="h-9 w-full rounded-lg border border-neutral-300 bg-white px-2 font-sf-light transition-all placeholder:font-sf-light dark:border-neutral-700 dark:bg-dark-gray dark:placeholder:text-neutral-700"
+            className="h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700"
             type="text"
             placeholder="Enter here"
             required
@@ -26,7 +26,7 @@ export default function Contact() {
             Last Name
           </label>
           <input
-            className="h-9 w-full rounded-lg border border-neutral-300 bg-white px-2 font-sf-light transition-all placeholder:font-sf-light dark:border-neutral-700 dark:bg-dark-gray dark:placeholder:text-neutral-700"
+            className="h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700"
             type="text"
             placeholder="Enter here"
             required
@@ -37,7 +37,7 @@ export default function Contact() {
             Email
           </label>
           <input
-            className="h-9 w-full rounded-lg border border-neutral-300 bg-white px-2 font-sf-light transition-all placeholder:font-sf-light dark:border-neutral-700 dark:bg-dark-gray dark:placeholder:text-neutral-700"
+            className="h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700"
             type="email"
             placeholder="Enter here"
             required
@@ -48,7 +48,7 @@ export default function Contact() {
             Message
           </label>
           <textarea
-            className="h-32 max-h-64 min-h-[2.5rem] w-full rounded-lg border border-neutral-300 bg-white p-2 font-sf-light transition-all placeholder:font-sf-light dark:border-neutral-700 dark:bg-dark-gray dark:placeholder:text-neutral-700"
+            className="h-32 max-h-64 min-h-[2.5rem] w-full rounded-lg bg-light-gray p-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700"
             placeholder="Enter here"
             required
           />
