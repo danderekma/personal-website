@@ -2,19 +2,20 @@
 
 import { Formik, Field, Form, FormikProps, FormikHelpers } from "formik";
 import emailjs from "@emailjs/browser";
+import { object, string, InferType } from "yup";
 
-interface Values {
-  firstName: string;
-  lastName: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+const FormSchema = object().shape({
+  firstName: string().required("Required"),
+  lastName: string().required("Required"),
+  email: string().email("Invalid email").required("Required"),
+  subject: string().required("Required"),
+  message: string().required("Required")
+});
 
 export default function Contact() {
   const handleSubmit = async (
-    values: Values,
-    { resetForm }: FormikHelpers<Values>
+    values: InferType<typeof FormSchema>,
+    { resetForm }: FormikHelpers<InferType<typeof FormSchema>>
   ) => {
     if (
       process.env.NEXT_PUBLIC_SERVICE_ID &&
@@ -57,9 +58,16 @@ export default function Contact() {
           subject: "",
           message: ""
         }}
+        validationSchema={FormSchema}
         onSubmit={handleSubmit}
       >
-        {(props: FormikProps<Values>) => (
+        {({
+          values,
+          touched,
+          errors,
+          submitForm,
+          isSubmitting
+        }: FormikProps<InferType<typeof FormSchema>>) => (
           <Form className="grid grid-cols-1 gap-y-6 xl:grid-cols-5 xl:gap-x-12">
             <div className="flex flex-col">
               <label className="font-sf-regular transition-all dark:text-neutral-400">
@@ -67,12 +75,20 @@ export default function Contact() {
               </label>
               <Field
                 id="firstName"
-                className="h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700"
+                className={`h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700 ${
+                  touched.firstName &&
+                  errors.firstName &&
+                  "border border-red-500"
+                }`}
                 type="text"
-                value={props.values.firstName}
+                value={values.firstName}
                 placeholder="Enter here"
-                required
               />
+              {touched.firstName && errors.firstName && (
+                <div className="font-sf-light text-sm text-red-500">
+                  {errors.firstName}
+                </div>
+              )}
             </div>
             <div className="flex flex-col">
               <label className="font-sf-regular transition-all dark:text-neutral-400">
@@ -80,12 +96,18 @@ export default function Contact() {
               </label>
               <Field
                 id="lastName"
-                className="h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700"
+                className={`h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700 ${
+                  touched.lastName && errors.lastName && "border border-red-500"
+                }`}
                 type="text"
-                value={props.values.lastName}
+                value={values.lastName}
                 placeholder="Enter here"
-                required
               />
+              {touched.lastName && errors.lastName && (
+                <div className="font-sf-light text-sm text-red-500">
+                  {errors.lastName}
+                </div>
+              )}
             </div>
             <div className="flex flex-col">
               <label className="font-sf-regular transition-all dark:text-neutral-400">
@@ -93,12 +115,18 @@ export default function Contact() {
               </label>
               <Field
                 id="email"
-                className="h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700"
-                type="email"
-                value={props.values.email}
+                className={`h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700 ${
+                  touched.email && errors.email && "border border-red-500"
+                }`}
+                type="text"
+                value={values.email}
                 placeholder="Enter here"
-                required
               />
+              {touched.email && errors.email && (
+                <div className="font-sf-light text-sm text-red-500">
+                  {errors.email}
+                </div>
+              )}
             </div>
             <div className="flex flex-col xl:col-span-2">
               <label className="font-sf-regular transition-all dark:text-neutral-400">
@@ -106,12 +134,18 @@ export default function Contact() {
               </label>
               <Field
                 id="subject"
-                className="h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700"
+                className={`h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700 ${
+                  touched.subject && errors.subject && "border border-red-500"
+                }`}
                 type="text"
-                value={props.values.subject}
+                value={values.subject}
                 placeholder="Enter here"
-                required
               />
+              {touched.subject && errors.subject && (
+                <div className="font-sf-light text-sm text-red-500">
+                  {errors.subject}
+                </div>
+              )}
             </div>
             <div className="flex flex-col xl:col-span-5">
               <label className="font-sf-regular transition-all dark:text-neutral-400">
@@ -120,17 +154,22 @@ export default function Contact() {
               <Field
                 as="textarea"
                 id="message"
-                className="h-32 max-h-64 min-h-[2.5rem] w-full rounded-lg bg-light-gray p-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700"
-                value={props.values.message}
+                className={`h-32 max-h-64 min-h-[2.5rem] w-full rounded-lg bg-light-gray p-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700 ${
+                  touched.message && errors.message && "border border-red-500"
+                }`}
+                value={values.message}
                 placeholder="Enter here"
-                required
               />
+              {touched.message && errors.message && (
+                <div className="font-sf-light text-sm text-red-500">
+                  {errors.message}
+                </div>
+              )}
             </div>
             <button
               type="submit"
               className="mt-2 h-9 w-full justify-self-end rounded-lg bg-light-gray font-sf-regular dark:bg-dark-gray dark:text-neutral-400 xl:col-start-5"
-              onClick={props.submitForm}
-              disabled={props.isSubmitting}
+              disabled={isSubmitting}
             >
               Submit
             </button>
