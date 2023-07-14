@@ -6,7 +6,7 @@ import Card from "./Card";
 export default function Projects() {
   return (
     <div
-      className="py-12 px-[15%] sm:py-24 sm:px-[20%] xl:mx-auto xl:max-w-screen-xl xl:p-0"
+      className="py-12 px-[15%] sm:py-24 sm:px-[20%] xl:mx-auto xl:max-w-screen-xl xl:px-0"
       id="projects"
     >
       <h1 className="py-6 font-sf-bold text-2xl transition-all duration-100 dark:text-white sm:text-4xl">
