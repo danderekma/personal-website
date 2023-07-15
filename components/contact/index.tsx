@@ -167,7 +167,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="mt-2 h-9 w-full justify-self-end rounded-lg bg-light-gray font-sf-regular text-sm dark:bg-dark-gray dark:text-neutral-400 sm:text-base xl:col-start-5"
+              className="mt-2 h-9 w-full justify-self-end rounded-lg bg-light-gray font-sf-regular text-sm transition-all dark:bg-dark-gray dark:text-neutral-400 sm:text-base xl:col-start-5"
               disabled={isSubmitting}
             >
               Submit
