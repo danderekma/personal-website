@@ -10,6 +10,9 @@ import DarkModeToggle from "react-dark-mode-toggle";
 import IconRow from "./IconRow";
 import Icon from "./Icon";
 
+import ProfilePicLight from "/public/images/profile-pic-light.webp";
+import ProfilePicDark from "/public/images/profile-pic-dark.webp";
+
 export default function Welcome() {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -34,17 +37,13 @@ export default function Welcome() {
       </div>
       <div>
         <div className="relative z-10 flex justify-center">
-          <Image
-            src={
-              resolvedTheme === "dark"
-                ? "/images/profile-pic-dark.webp"
-                : "/images/profile-pic-light.webp"
-            }
-            width={2000}
-            height={2000}
-            alt={`profile-pic-${resolvedTheme}.webp`}
-            className="w-56 rounded-full sm:w-80"
-          />
+          <div className="w-56 transition-all sm:w-80">
+            <Image
+              src={resolvedTheme === "dark" ? ProfilePicDark : ProfilePicLight}
+              alt={`profile-pic-${resolvedTheme}.webp`}
+              className="rounded-full"
+            />
+          </div>
         </div>
         <div className="relative bottom-7 flex h-72 flex-col justify-center gap-3 bg-light-gray transition-all dark:bg-dark-gray sm:h-[22rem] sm:gap-5">
           <div className="flex flex-col items-center sm:gap-2">

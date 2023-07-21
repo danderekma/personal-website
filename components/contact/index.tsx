@@ -65,17 +65,16 @@ export default function Contact() {
           values,
           touched,
           errors,
-          submitForm,
           isSubmitting
         }: FormikProps<InferType<typeof FormSchema>>) => (
           <Form className="grid grid-cols-1 gap-y-6 xl:grid-cols-5 xl:gap-x-12">
             <div className="flex flex-col">
-              <label className="font-sf-regular transition-all dark:text-neutral-400">
+              <label className="font-sf-regular text-sm transition-all dark:text-neutral-400 sm:text-base">
                 First Name
               </label>
               <Field
                 id="firstName"
-                className={`h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700 ${
+                className={`h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light placeholder:text-sm dark:bg-dark-gray dark:placeholder:text-neutral-700 placeholder:sm:text-base ${
                   touched.firstName &&
                   errors.firstName &&
                   "border border-red-500"
@@ -91,12 +90,12 @@ export default function Contact() {
               )}
             </div>
             <div className="flex flex-col">
-              <label className="font-sf-regular transition-all dark:text-neutral-400">
+              <label className="font-sf-regular text-sm transition-all dark:text-neutral-400 sm:text-base">
                 Last Name
               </label>
               <Field
                 id="lastName"
-                className={`h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700 ${
+                className={`h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light placeholder:text-sm dark:bg-dark-gray dark:placeholder:text-neutral-700 placeholder:sm:text-base ${
                   touched.lastName && errors.lastName && "border border-red-500"
                 }`}
                 type="text"
@@ -110,12 +109,12 @@ export default function Contact() {
               )}
             </div>
             <div className="flex flex-col">
-              <label className="font-sf-regular transition-all dark:text-neutral-400">
+              <label className="font-sf-regular text-sm transition-all dark:text-neutral-400 sm:text-base">
                 Email
               </label>
               <Field
                 id="email"
-                className={`h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700 ${
+                className={`h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light placeholder:text-sm dark:bg-dark-gray dark:placeholder:text-neutral-700 placeholder:sm:text-base ${
                   touched.email && errors.email && "border border-red-500"
                 }`}
                 type="text"
@@ -129,12 +128,12 @@ export default function Contact() {
               )}
             </div>
             <div className="flex flex-col xl:col-span-2">
-              <label className="font-sf-regular transition-all dark:text-neutral-400">
+              <label className="font-sf-regular text-sm transition-all dark:text-neutral-400 sm:text-base">
                 Subject
               </label>
               <Field
                 id="subject"
-                className={`h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700 ${
+                className={`h-9 w-full rounded-lg bg-light-gray px-2 font-sf-light transition-all placeholder:font-sf-light placeholder:text-sm dark:bg-dark-gray dark:placeholder:text-neutral-700 placeholder:sm:text-base ${
                   touched.subject && errors.subject && "border border-red-500"
                 }`}
                 type="text"
@@ -148,13 +147,13 @@ export default function Contact() {
               )}
             </div>
             <div className="flex flex-col xl:col-span-5">
-              <label className="font-sf-regular transition-all dark:text-neutral-400">
+              <label className="font-sf-regular text-sm transition-all dark:text-neutral-400 sm:text-base">
                 Message
               </label>
               <Field
                 as="textarea"
                 id="message"
-                className={`h-32 max-h-64 min-h-[2.5rem] w-full rounded-lg bg-light-gray p-2 font-sf-light transition-all placeholder:font-sf-light dark:bg-dark-gray dark:placeholder:text-neutral-700 ${
+                className={`h-32 max-h-64 min-h-[2.5rem] w-full rounded-lg bg-light-gray p-2 font-sf-light transition-all placeholder:font-sf-light placeholder:text-sm dark:bg-dark-gray dark:placeholder:text-neutral-700 placeholder:sm:text-base ${
                   touched.message && errors.message && "border border-red-500"
                 }`}
                 value={values.message}
@@ -168,7 +167,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="mt-2 h-9 w-full justify-self-end rounded-lg bg-light-gray font-sf-regular dark:bg-dark-gray dark:text-neutral-400 xl:col-start-5"
+              className="mt-2 h-9 w-full justify-self-end rounded-lg bg-light-gray font-sf-regular text-sm transition-all dark:bg-dark-gray dark:text-neutral-400 sm:text-base xl:col-start-5"
               disabled={isSubmitting}
             >
               Submit
