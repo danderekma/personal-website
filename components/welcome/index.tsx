@@ -37,7 +37,7 @@ export default function Welcome() {
       </div>
       <div>
         <div className="relative z-10 flex justify-center">
-          <div className="w-56 sm:w-80">
+          <div className="w-56 transition-all sm:w-80">
             <Image
               src={resolvedTheme === "dark" ? ProfilePicDark : ProfilePicLight}
               alt={`profile-pic-${resolvedTheme}.webp`}
