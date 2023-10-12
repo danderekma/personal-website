@@ -55,7 +55,7 @@ export default function Projects() {
               />
             </div>
           }
-          link="https://codelabdavis.medium.com"
+          link="https://codelabdavis.medium.com/training-tool-a547c6d311a0"
         />
       </CardGrid>
     </div>
