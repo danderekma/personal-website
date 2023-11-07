@@ -57,7 +57,7 @@ export default function Welcome() {
           <div className="flex flex-col items-center text-center">
             <ul className="list-none">
               <li className="font-sf-light text-sm transition-all duration-100 dark:text-neutral-400 sm:text-xl">
-                🌟 Full Stack Development
+                💻 Full Stack Development
               </li>
               <li className="font-sf-light text-sm transition-all duration-100 dark:text-neutral-400 sm:text-xl">
                 🏫 Computer Science at UC Davis
