@@ -45,7 +45,7 @@ export default function Welcome() {
             />
           </div>
         </div>
-        <div className="relative bottom-7 flex h-72 flex-col justify-center gap-3 bg-light-gray transition-all dark:bg-dark-gray sm:h-[22rem] sm:gap-5">
+        <div className="relative bottom-7 flex h-72 flex-col justify-center gap-3 bg-light-gray transition-all dark:bg-dark-gray sm:h-80 sm:gap-5">
           <div className="flex flex-col items-center sm:gap-2">
             <h1 className="font-sf-bold text-3xl transition-all duration-100 dark:text-white sm:text-5xl">
               👋 Hi, I&apos;m Derek!
@@ -61,9 +61,6 @@ export default function Welcome() {
               </li>
               <li className="font-sf-light text-sm transition-all duration-100 dark:text-neutral-400 sm:text-xl">
                 🏫 Computer Science at UC Davis
-              </li>
-              <li className="font-sf-light text-sm transition-all duration-100 dark:text-neutral-400 sm:text-xl">
-                💼 Frontend Developer Intern at GBCS Group
               </li>
               <li className="font-sf-light text-sm transition-all duration-100 dark:text-neutral-400 sm:text-xl">
                 <a href="mailto:danderekma@gmail.com">
