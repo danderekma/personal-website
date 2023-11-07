@@ -1,4 +1,11 @@
-import Welcome from "@/components/welcome";
+import dynamic from "next/dynamic";
+
+import WelcomeLoading from "@/components/welcome/Loading";
+const Welcome = dynamic(() => import("@/components/welcome"), {
+  loading: () => <WelcomeLoading />,
+  ssr: false
+});
+
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 
