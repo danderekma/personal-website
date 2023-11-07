@@ -45,11 +45,11 @@ export default function Projects() {
           name="CodeLab Training Tool"
           description="An internal training tool that allows associates to create and consume educational material and track personal progress."
           image={
-            <div className="flex h-full w-full items-center justify-center rounded-3xl bg-gradient-to-r from-[#65DEF9] to-[#509DE5]">
+            <div className="flex aspect-video w-full items-center justify-center rounded-3xl bg-white lg:h-full">
               <Image
-                src="/images/training-tool-cow.svg"
-                alt="training-tool-cow.svg"
-                className="h-[60%] w-auto rounded-3xl object-cover"
+                src="/images/training-tool.svg"
+                alt="training-tool.svg"
+                className="h-1/4"
                 width={3024}
                 height={1673}
               />
