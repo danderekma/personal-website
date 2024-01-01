@@ -12,6 +12,7 @@ const sfRegular = localFont({
 });
 
 const theme = createTheme({
+  primaryColor: "dark",
   fontFamily: sfRegular.style.fontFamily,
   colors: {
     "light-gray": [
