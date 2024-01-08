@@ -6,7 +6,9 @@ import { IconHome, IconFolder, IconPhone } from "@tabler/icons-react";
 
 import ProfilePicLight from "@/public/images/profile-pic-light.webp";
 
-const data = [
+import { NavItem } from "./types";
+
+const navItems: NavItem[] = [
   {
     icon: <IconHome />,
     label: "Home"
@@ -21,7 +23,7 @@ const data = [
   }
 ];
 
-export default function Navbar() {
+export function Navbar() {
   const [active, setActive] = useState(0);
 
   return (
@@ -36,17 +38,18 @@ export default function Navbar() {
           radius="100%"
         />
         <Space h="lg" />
-        {data.map((link, index) => (
+        {navItems.map((item, index) => (
           <NavLink
-            key={link.label}
+            key={item.label}
             active={index === active}
-            leftSection={link.icon}
+            leftSection={item.icon}
             label={
-              <Text fz="xl" fw={active === index ? "bold" : "normal"}>
-                {link.label}
+              <Text fz="lg" fw={active === index ? "bold" : "normal"}>
+                {item.label}
               </Text>
             }
             onClick={() => setActive(index)}
+            color="black"
             styles={{
               root: {
                 borderRadius: 12

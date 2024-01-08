@@ -1,5 +1,5 @@
-import localFont from "next/font/local";
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { MantineProvider, ColorSchemeScript, createTheme } from "@mantine/core";
 import "@mantine/core/styles.css";
 
@@ -10,9 +10,11 @@ export const metadata: Metadata = {
 const sfRegular = localFont({
   src: "../public/fonts/SF-Pro-Rounded-Regular.woff2"
 });
+const sfBold = localFont({
+  src: "../public/fonts/SF-Pro-Rounded-Bold.woff2"
+});
 
 const theme = createTheme({
-  primaryColor: "dark",
   fontFamily: sfRegular.style.fontFamily,
   colors: {
     "light-gray": [
@@ -27,6 +29,9 @@ const theme = createTheme({
       "#656565",
       "#575757"
     ]
+  },
+  headings: {
+    fontFamily: sfBold.style.fontFamily
   }
 });
 

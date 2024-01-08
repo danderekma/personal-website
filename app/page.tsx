@@ -2,7 +2,7 @@
 
 import { AppShell } from "@mantine/core";
 
-import Navbar from "@/components/navbar";
+import { Navbar, Welcome } from "@/components";
 
 export default function Home() {
   return (
@@ -15,7 +15,9 @@ export default function Home() {
         padding="md"
       >
         <Navbar />
-        <AppShell.Main>Main</AppShell.Main>
+        <AppShell.Main>
+          <Welcome />
+        </AppShell.Main>
       </AppShell>
     </main>
   );
