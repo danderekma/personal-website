@@ -15,7 +15,6 @@ const sfBold = localFont({
 });
 
 const theme = createTheme({
-  primaryShade: 5,
   fontFamily: sfRegular.style.fontFamily,
   headings: {
     fontFamily: sfBold.style.fontFamily

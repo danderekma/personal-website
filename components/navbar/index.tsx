@@ -67,7 +67,6 @@ export function Navbar() {
               </Text>
             }
             onClick={() => setActive(index)}
-            color="dark"
             styles={{
               root: {
                 borderRadius: 12
