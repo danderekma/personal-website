@@ -26,7 +26,7 @@ import ProfilePicLight from "@/public/images/profile-pic-light.webp";
 
 import { NavItem } from "./types";
 
-const navItems: NavItem[] = [
+const data: NavItem[] = [
   {
     icon: <IconHome />,
     label: "Home"
@@ -56,7 +56,7 @@ export function Navbar() {
           radius="100%"
         />
         <Space h="lg" />
-        {navItems.map((item, index) => (
+        {data.map((item, index) => (
           <NavLink
             key={item.label}
             active={index === active}

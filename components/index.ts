@@ -1,2 +1,2 @@
-export * from "./navbar";
-export * from "./welcome";
+export * from "./navbar/Navbar";
+export * from "./welcome/Welcome";
