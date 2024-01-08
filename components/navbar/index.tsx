@@ -27,7 +27,7 @@ export function Navbar() {
   const [active, setActive] = useState(0);
 
   return (
-    <AppShell.Navbar p="lg" bg="light-gray.0" withBorder={false}>
+    <AppShell.Navbar p="lg" withBorder={false}>
       <Stack align="center" gap="xs">
         <Space h="lg" />
         <Image
@@ -49,7 +49,7 @@ export function Navbar() {
               </Text>
             }
             onClick={() => setActive(index)}
-            color="black"
+            color="dark"
             styles={{
               root: {
                 borderRadius: 12
