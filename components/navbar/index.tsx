@@ -1,8 +1,26 @@
 import { useState } from "react";
-import { AppShell, Stack, Space, Text, Image, NavLink } from "@mantine/core";
+import {
+  AppShell,
+  Stack,
+  Space,
+  Text,
+  Image,
+  NavLink,
+  Group,
+  ActionIcon
+} from "@mantine/core";
 import NextImage from "next/image";
 
-import { IconHome, IconFolder, IconPhone } from "@tabler/icons-react";
+import {
+  IconHome,
+  IconFolder,
+  IconPhone,
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandTwitter
+} from "@tabler/icons-react";
 
 import ProfilePicLight from "@/public/images/profile-pic-light.webp";
 
@@ -28,8 +46,8 @@ export function Navbar() {
 
   return (
     <AppShell.Navbar p="lg" withBorder={false}>
-      <Stack align="center" gap="xs">
-        <Space h="lg" />
+      <Stack h="100%" align="center" gap="xs">
+        <Space h="md" />
         <Image
           component={NextImage}
           src={ProfilePicLight}
@@ -57,6 +75,37 @@ export function Navbar() {
             }}
           />
         ))}
+        <Space m="auto" />
+        <Group gap="xs">
+          <ActionIcon
+            variant="transparent"
+            color="dark"
+            onClick={() =>
+              router.push(
+                "https://www.facebook.com/profile.php?id=100010707514748"
+              )
+            }
+          >
+            <IconBrandFacebook />
+          </ActionIcon>
+          <ActionIcon
+            variant="transparent"
+            color="dark"
+            onClick={() => router.push("https://www.instagram.com/danderekma/")}
+          >
+            <IconBrandInstagram />
+          </ActionIcon>
+          <ActionIcon variant="transparent" color="dark">
+            <IconBrandGithub />
+          </ActionIcon>
+          <ActionIcon variant="transparent" color="dark">
+            <IconBrandLinkedin />
+          </ActionIcon>
+          <ActionIcon variant="transparent" color="dark">
+            <IconBrandTwitter />
+          </ActionIcon>
+        </Group>
+        <Space h="md" />
       </Stack>
     </AppShell.Navbar>
   );
