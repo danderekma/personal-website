@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {
+  useMantineColorScheme,
   AppShell,
   Stack,
   Space,
@@ -23,8 +24,11 @@ import {
 } from "@tabler/icons-react";
 
 import ProfilePicLight from "@/public/images/profile-pic-light.webp";
+import ProfilePicDark from "@/public/images/profile-pic-dark.webp";
 
 import { NavItem } from "./types";
+
+import styles from "./Navbar.module.css";
 
 const data: NavItem[] = [
   {
@@ -43,12 +47,22 @@ const data: NavItem[] = [
 
 export function Navbar() {
   const [active, setActive] = useState(0);
+  const { colorScheme } = useMantineColorScheme();
 
   return (
-    <AppShell.Navbar p="lg" withBorder={false}>
+    <AppShell.Navbar className={styles.root} p="lg" withBorder={false}>
       <Stack h="100%" align="center" gap="xs">
         <Space h="md" />
         <Image
+          className={styles.dark}
+          component={NextImage}
+          src={ProfilePicDark}
+          alt="profile-pic-dark.webp"
+          w="60%"
+          radius="100%"
+        />
+        <Image
+          className={styles.light}
           component={NextImage}
           src={ProfilePicLight}
           alt="profile-pic-light.webp"

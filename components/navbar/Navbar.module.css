@@ -1,0 +1,26 @@
+.dark {
+  @mixin light {
+    display: none;
+  }
+
+  @mixin dark {
+    display: block;
+  }
+}
+
+.light {
+  @mixin dark {
+    display: none;
+  }
+
+  @mixin light {
+    display: block;
+  }
+}
+
+.root {
+  background-color: light-dark(
+    var(--mantine-color-gray-0),
+    var(--mantine-color-dark-8)
+  );
+}
