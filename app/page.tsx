@@ -9,7 +9,7 @@ import {
 
 import { IconSun, IconMoonStars } from "@tabler/icons-react";
 
-import { Navbar, Welcome } from "@/components";
+import { Navbar, Welcome, Projects } from "@/components";
 
 import styles from "./page.module.css";
 
@@ -34,6 +34,7 @@ export default function Home() {
             </ActionIcon>
           </Flex>
           <Welcome />
+          <Projects />
         </AppShell.Main>
       </AppShell>
     </main>

@@ -70,6 +70,7 @@ export function Navbar() {
         <Space h="lg" />
         {data.map((item, index) => (
           <NavLink
+            className={styles.navlink}
             key={item.label}
             active={index === active}
             leftSection={item.icon}
