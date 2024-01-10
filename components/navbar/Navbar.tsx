@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  useMantineColorScheme,
   AppShell,
   Stack,
   Space,
@@ -47,7 +46,6 @@ const data: NavItem[] = [
 
 export function Navbar() {
   const [active, setActive] = useState(0);
-  const { colorScheme } = useMantineColorScheme();
 
   return (
     <AppShell.Navbar className={styles.root} p="lg" withBorder={false}>

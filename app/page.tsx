@@ -10,6 +10,7 @@ import {
 import { IconSun, IconMoonStars } from "@tabler/icons-react";
 
 import { Navbar, Welcome } from "@/components";
+
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
         padding="md"
       >
         <Navbar />
-        <AppShell.Main>
+        <AppShell.Main className={styles.main}>
           <Flex justify="end">
             <ActionIcon size="xl" variant="default" onClick={toggleColorScheme}>
               <IconSun className={styles.light} />

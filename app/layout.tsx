@@ -15,9 +15,24 @@ const sfBold = localFont({
 });
 
 const theme = createTheme({
+  colors: {
+    dark: [
+      "#E8E9EA",
+      "#D1D3D4",
+      "#BBBCBF",
+      "#A4A6A9",
+      "#8D9094",
+      "#767A7E",
+      "#5F6469",
+      "#494D53",
+      "#21272E",
+      "#1B2128"
+    ]
+  },
   fontFamily: sfRegular.style.fontFamily,
   headings: {
-    fontFamily: sfBold.style.fontFamily
+    fontFamily: sfBold.style.fontFamily,
+    fontWeight: "normal"
   }
 });
 
