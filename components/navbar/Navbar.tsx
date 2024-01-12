@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   AppShell,
   Stack,
@@ -46,9 +47,10 @@ const data: NavItem[] = [
 
 export function Navbar() {
   const [active, setActive] = useState(0);
+  const router = useRouter();
 
   return (
-    <AppShell.Navbar className={styles.root} p="lg" withBorder={false}>
+    <AppShell.Navbar className={styles["navbar"]} p="lg" withBorder={false}>
       <Stack h="100%" align="center" gap="xs">
         <Space h="md" />
         <Image
@@ -70,7 +72,7 @@ export function Navbar() {
         <Space h="lg" />
         {data.map((item, index) => (
           <NavLink
-            className={styles.navlink}
+            className={styles["navlink"]}
             key={item.label}
             active={index === active}
             leftSection={item.icon}
@@ -107,13 +109,27 @@ export function Navbar() {
           >
             <IconBrandInstagram />
           </ActionIcon>
-          <ActionIcon variant="transparent" color="dark">
+          <ActionIcon
+            variant="transparent"
+            color="dark"
+            onClick={() => router.push("https://github.com/danderekma")}
+          >
             <IconBrandGithub />
           </ActionIcon>
-          <ActionIcon variant="transparent" color="dark">
+          <ActionIcon
+            variant="transparent"
+            color="dark"
+            onClick={() =>
+              router.push("https://www.linkedin.com/in/danderekma/")
+            }
+          >
             <IconBrandLinkedin />
           </ActionIcon>
-          <ActionIcon variant="transparent" color="dark">
+          <ActionIcon
+            variant="transparent"
+            color="dark"
+            onClick={() => router.push("https://twitter.com/danderekma")}
+          >
             <IconBrandTwitter />
           </ActionIcon>
         </Group>

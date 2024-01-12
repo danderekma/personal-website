@@ -26,11 +26,11 @@ export default function Home() {
         padding="md"
       >
         <Navbar />
-        <AppShell.Main className={styles.main}>
+        <AppShell.Main className={styles["appshell-main"]}>
           <Flex justify="end">
-            <ActionIcon size="xl" variant="default" onClick={toggleColorScheme}>
-              <IconSun className={styles.light} />
-              <IconMoonStars className={styles.dark} />
+            <ActionIcon size="xl" variant="subtle" onClick={toggleColorScheme}>
+              <IconSun className={styles["light"]} />
+              <IconMoonStars className={styles["dark"]} />
             </ActionIcon>
           </Flex>
           <Welcome />
