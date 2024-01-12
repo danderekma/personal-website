@@ -57,7 +57,7 @@ export function Navbar({ toggle }: Props) {
   return (
     <AppShell.Navbar className={styles["navbar"]} p="lg" withBorder={false}>
       <Stack h="100%" align="center" gap="xs">
-        <CloseButton hiddenFrom="sm" ml="auto" onClick={toggle} />
+        <CloseButton size="lg" hiddenFrom="sm" ml="auto" onClick={toggle} />
         <Space h="md" />
         <Image
           className={styles.dark}
