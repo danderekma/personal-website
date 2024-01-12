@@ -8,7 +8,8 @@ import {
   Image,
   NavLink,
   Group,
-  ActionIcon
+  ActionIcon,
+  CloseButton
 } from "@mantine/core";
 import NextImage from "next/image";
 
@@ -45,13 +46,18 @@ const data: NavItem[] = [
   }
 ];
 
-export function Navbar() {
+type Props = {
+  toggle: () => void;
+};
+
+export function Navbar({ toggle }: Props) {
   const [active, setActive] = useState(0);
   const router = useRouter();
 
   return (
     <AppShell.Navbar className={styles["navbar"]} p="lg" withBorder={false}>
       <Stack h="100%" align="center" gap="xs">
+        <CloseButton hiddenFrom="sm" ml="auto" onClick={toggle} />
         <Space h="md" />
         <Image
           className={styles.dark}

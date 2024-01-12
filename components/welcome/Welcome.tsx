@@ -6,8 +6,12 @@ export function Welcome() {
       <Text fz="xl">Hey there! 👋</Text>
       <Title order={1}>I'm Derek Ma</Title>
       <Title order={3}>Software Engineer and Student at UC Davis</Title>
-      <Space h="xl" />
-      <Text>Hello</Text>
+      <Space h="md" />
+      <Text>
+        I'm currently a third year undergraduate studying Computer Science at
+        the University of California, Davis with interests in mobile and full
+        stack web development.
+      </Text>
     </Container>
   );
 }
