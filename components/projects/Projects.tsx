@@ -1,4 +1,4 @@
-import { Container, Text, Title, Space } from "@mantine/core";
+import { Container, Title } from "@mantine/core";
 
 export function Projects() {
   return (

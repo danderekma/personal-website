@@ -1,10 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import {
   useMantineColorScheme,
   AppShell,
   Flex,
-  ActionIcon
+  ActionIcon,
+  Space
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
@@ -22,6 +24,7 @@ import styles from "./page.module.css";
 export default function Home() {
   const { toggleColorScheme } = useMantineColorScheme();
   const [opened, { toggle }] = useDisclosure();
+  const router = useRouter();
 
   return (
     <main>
@@ -50,6 +53,9 @@ export default function Home() {
               className={styles["action-icon"]}
               size="xl"
               variant="default"
+              onClick={() =>
+                router.push("https://github.com/danderekma/personal-website")
+              }
             >
               <IconBrandGithub />
             </ActionIcon>
@@ -64,6 +70,7 @@ export default function Home() {
             </ActionIcon>
           </Flex>
           <Welcome />
+          <Space h="xl" />
           <Projects />
         </AppShell.Main>
       </AppShell>
