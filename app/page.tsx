@@ -6,7 +6,10 @@ import {
   AppShell,
   Flex,
   ActionIcon,
-  Space
+  Space,
+  Center,
+  Container,
+  Text
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
@@ -73,6 +76,13 @@ export default function Home() {
           <Space h="xl" />
           <Projects />
         </AppShell.Main>
+        <AppShell.Footer withBorder={false} bg="transparent" py="sm">
+          <Container>
+            <Text ta="center" c="dark">
+              Created with ❤️ by Derek Ma <br /> © 2024
+            </Text>
+          </Container>
+        </AppShell.Footer>
       </AppShell>
     </main>
   );
