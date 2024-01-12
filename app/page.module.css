@@ -23,4 +23,8 @@
     var(--mantine-color-gray-0),
     var(--mantine-color-dark-8)
   );
+  background-image: light-dark(
+    url("../public/svgs/bg-grid-lg-light.svg"),
+    url("../public/svgs/bg-grid-lg-dark.svg")
+  );
 }

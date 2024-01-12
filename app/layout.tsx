@@ -16,6 +16,19 @@ const sfBold = localFont({
 
 const theme = createTheme({
   colors: {
+    gray: [
+      "#FFFFFF",
+      "#EFEFEF",
+      "#D7D7D7",
+      "#BFBFBF",
+      "#A7A7A7",
+      "#8F8F8F",
+      "#787878",
+      "#606060",
+      "#484848",
+      "#303030",
+      "#181818"
+    ],
     dark: [
       "#E8E9EA",
       "#D1D3D4",
