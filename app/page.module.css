@@ -29,6 +29,10 @@
   );
 }
 
+.appshell-footer {
+  position: relative;
+}
+
 .action-icon {
   background-color: light-dark(
     var(--mantine-color-gray-1),

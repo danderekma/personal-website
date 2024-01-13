@@ -20,7 +20,7 @@ import {
   IconMenu2
 } from "@tabler/icons-react";
 
-import { Navbar, Welcome, Projects } from "@/components";
+import { Navbar, Welcome, Projects, Contact } from "@/components";
 
 import styles from "./page.module.css";
 
@@ -76,14 +76,20 @@ export default function Home() {
           <Space h="xl" />
           <Projects />
           <Space h="xl" />
+          <Contact />
+          <AppShell.Footer
+            className={styles["appshell-footer"]}
+            withBorder={false}
+            bg="transparent"
+            py="sm"
+          >
+            <Container>
+              <Text ta="center" c="dark">
+                Created with ❤️ by Derek Ma <br /> © 2024
+              </Text>
+            </Container>
+          </AppShell.Footer>
         </AppShell.Main>
-        <AppShell.Footer withBorder={false} bg="transparent" py="sm">
-          <Container>
-            <Text ta="center" c="dark">
-              Created with ❤️ by Derek Ma <br /> © 2024
-            </Text>
-          </Container>
-        </AppShell.Footer>
       </AppShell>
     </main>
   );
