@@ -45,7 +45,7 @@ export default function Home() {
             <ActionIcon
               size="xl"
               color="dark"
-              variant="transparent"
+              variant="filled"
               mr="auto"
               hiddenFrom="sm"
               onClick={toggle}

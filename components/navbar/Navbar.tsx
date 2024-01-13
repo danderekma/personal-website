@@ -59,6 +59,7 @@ export function Navbar({ toggle }: Props) {
       <Stack h="100%" align="center" gap="xs">
         <CloseButton
           size="lg"
+          color="dark"
           variant="transparent"
           hiddenFrom="sm"
           ml="auto"
