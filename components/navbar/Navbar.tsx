@@ -27,7 +27,7 @@ import {
 import ProfilePicLight from "@/public/images/profile-pic-light.webp";
 import ProfilePicDark from "@/public/images/profile-pic-dark.webp";
 
-import { NavItem } from "./types";
+import { Props, NavItem } from "./types";
 
 import styles from "./Navbar.module.css";
 
@@ -46,10 +46,6 @@ const data: NavItem[] = [
   }
 ];
 
-type Props = {
-  toggle: () => void;
-};
-
 export function Navbar({ toggle }: Props) {
   const [active, setActive] = useState(0);
   const router = useRouter();
@@ -67,7 +63,7 @@ export function Navbar({ toggle }: Props) {
         />
         <Space h="md" />
         <Image
-          className={styles.dark}
+          className={styles["dark"]}
           component={NextImage}
           src={ProfilePicDark}
           alt="profile-pic-dark.webp"
@@ -75,7 +71,7 @@ export function Navbar({ toggle }: Props) {
           radius="100%"
         />
         <Image
-          className={styles.light}
+          className={styles["light"]}
           component={NextImage}
           src={ProfilePicLight}
           alt="profile-pic-light.webp"

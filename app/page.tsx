@@ -75,6 +75,7 @@ export default function Home() {
           <Welcome />
           <Space h="xl" />
           <Projects />
+          <Space h="xl" />
         </AppShell.Main>
         <AppShell.Footer withBorder={false} bg="transparent" py="sm">
           <Container>

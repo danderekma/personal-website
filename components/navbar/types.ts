@@ -1,6 +1,8 @@
-import { ReactNode } from "react";
+export type Props = {
+  toggle: () => void;
+};
 
 export type NavItem = {
-  icon: ReactNode;
+  icon: React.ReactNode;
   label: string;
 };
