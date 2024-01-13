@@ -78,20 +78,20 @@ export function Projects() {
               align="center"
               styles={{
                 root: {
+                  cursor: "pointer",
                   borderRadius: "var(--mantine-radius-lg)"
                 }
               }}
+              onClick={() =>
+                router.push(
+                  "https://codelabdavis.medium.com/training-tool-a547c6d311a0"
+                )
+              }
             >
               <Image
-                className={styles["image"]}
                 component={NextImage}
                 src={TrainingTool}
                 alt="training-tool.svg"
-                onClick={() =>
-                  router.push(
-                    "https://codelabdavis.medium.com/training-tool-a547c6d311a0"
-                  )
-                }
               />
             </Flex>
           }
