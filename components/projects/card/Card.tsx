@@ -12,7 +12,7 @@ export function Card({ name, description, image }: Props) {
         <Title order={3} mb={5}>
           {name}
         </Title>
-        <Text>{description}</Text>
+        <Text c="dimmed">{description}</Text>
       </Grid.Col>
     </Grid>
   );
