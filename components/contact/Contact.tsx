@@ -4,7 +4,8 @@ import {
   Grid,
   TextInput,
   Textarea,
-  Space
+  Space,
+  Button
 } from "@mantine/core";
 
 import styles from "./Contact.module.css";
@@ -14,8 +15,8 @@ export function Contact() {
     <Container py="sm">
       <Title order={2}>Contact Me</Title>
       <Space h="lg" />
-      <Grid columns={4}>
-        <Grid.Col span={1}>
+      <Grid>
+        <Grid.Col span={3}>
           <TextInput
             classNames={{
               input: styles["TextInput-input"]
@@ -27,7 +28,7 @@ export function Contact() {
             radius="md"
           />
         </Grid.Col>
-        <Grid.Col span={1}>
+        <Grid.Col span={3}>
           <TextInput
             classNames={{
               input: styles["TextInput-input"]
@@ -39,7 +40,7 @@ export function Contact() {
             radius="md"
           />
         </Grid.Col>
-        <Grid.Col span={2}>
+        <Grid.Col span={6}>
           <TextInput
             classNames={{
               input: styles["TextInput-input"]
@@ -51,7 +52,7 @@ export function Contact() {
             radius="md"
           />
         </Grid.Col>
-        <Grid.Col span={4}>
+        <Grid.Col span={12}>
           <Textarea
             classNames={{
               input: styles["Textarea-input"]
@@ -63,6 +64,11 @@ export function Contact() {
             radius="md"
             rows={4}
           />
+        </Grid.Col>
+        <Grid.Col span={2} offset={10}>
+          <Button variant="light" radius="md" fullWidth>
+            Submit
+          </Button>
         </Grid.Col>
       </Grid>
     </Container>
