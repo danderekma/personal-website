@@ -44,7 +44,7 @@ export function Contact() {
           process.env.NEXT_PUBLIC_SERVICE_ID,
           process.env.NEXT_PUBLIC_TEMPLATE_ID,
           {
-            name: values.email,
+            name: values.name,
             email: values.email,
             subject: values.subject,
             message: values.message
