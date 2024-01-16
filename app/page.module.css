@@ -18,7 +18,7 @@
   }
 }
 
-.appshell-main {
+.AppShell-main {
   background-color: light-dark(
     var(--mantine-color-gray-0),
     var(--mantine-color-dark-8)
@@ -29,11 +29,11 @@
   );
 }
 
-.appshell-footer {
+.AppShell-footer {
   position: relative;
 }
 
-.action-icon {
+.ActionIcon-root {
   background-color: light-dark(
     var(--mantine-color-gray-1),
     var(--mantine-color-dark-9)

@@ -18,18 +18,19 @@
   }
 }
 
-.navbar {
+.AppShell-navbar {
   background-color: light-dark(
     var(--mantine-color-gray-1),
     var(--mantine-color-dark-9)
   );
 }
 
-.navlink {
+.NavLink-root {
   &:hover {
     background-color: light-dark(
       var(--mantine-color-gray-2),
       var(--mantine-color-dark-8)
     );
   }
+  border-radius: var(--mantine-radius-md);
 }

@@ -36,7 +36,7 @@ export function Projects() {
           description="A full-stack web application developed to provide grading distributions and enrollment statistics for UC Davis students."
           image={
             <Image
-              className={styles["image"]}
+              className={styles["Image-root"]}
               component={NextImage}
               src={AggieExplorer}
               alt="aggie-explorer.jpeg"
@@ -56,7 +56,7 @@ export function Projects() {
           description="A landing page for the New Vietnam Studies Initiative at UC Davis created with Next.js."
           image={
             <Image
-              className={styles["image"]}
+              className={styles["Image-root"]}
               component={NextImage}
               src={NVSI}
               alt="nvsi.svg"
@@ -72,16 +72,11 @@ export function Projects() {
           description="An internal training tool that allows associates to create and consume educational material and track personal progress."
           image={
             <Flex
+              className={styles["Flex-root"]}
               bg="white"
               h={250}
               justify="center"
               align="center"
-              styles={{
-                root: {
-                  cursor: "pointer",
-                  borderRadius: "var(--mantine-radius-lg)"
-                }
-              }}
               onClick={() =>
                 router.push(
                   "https://codelabdavis.medium.com/training-tool-a547c6d311a0"

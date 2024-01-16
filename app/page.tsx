@@ -40,7 +40,7 @@ export default function Home() {
         padding="md"
       >
         <Navbar toggle={toggle} />
-        <AppShell.Main className={styles["appshell-main"]}>
+        <AppShell.Main className={styles["AppShell-main"]}>
           <Flex justify="end" gap="sm">
             <ActionIcon
               size="xl"
@@ -53,7 +53,7 @@ export default function Home() {
               <IconMenu2 />
             </ActionIcon>
             <ActionIcon
-              className={styles["action-icon"]}
+              className={styles["ActionIcon-root"]}
               size="xl"
               variant="default"
               onClick={() =>
@@ -63,7 +63,7 @@ export default function Home() {
               <IconBrandGithub />
             </ActionIcon>
             <ActionIcon
-              className={styles["action-icon"]}
+              className={styles["ActionIcon-root"]}
               size="xl"
               variant="default"
               onClick={toggleColorScheme}
@@ -78,7 +78,7 @@ export default function Home() {
           <Space h="xl" />
           <Contact />
           <AppShell.Footer
-            className={styles["appshell-footer"]}
+            className={styles["AppShell-footer"]}
             withBorder={false}
             bg="transparent"
             py="sm"

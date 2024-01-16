@@ -51,7 +51,11 @@ export function Navbar({ toggle }: Props) {
   const router = useRouter();
 
   return (
-    <AppShell.Navbar className={styles["navbar"]} p="lg" withBorder={false}>
+    <AppShell.Navbar
+      className={styles["AppShell-navbar"]}
+      p="lg"
+      withBorder={false}
+    >
       <Stack h="100%" align="center" gap="xs">
         <CloseButton
           size="lg"
@@ -81,7 +85,7 @@ export function Navbar({ toggle }: Props) {
         <Space h="lg" />
         {data.map((item, index) => (
           <NavLink
-            className={styles["navlink"]}
+            className={styles["NavLink-root"]}
             key={item.label}
             active={index === active}
             leftSection={item.icon}
@@ -91,11 +95,6 @@ export function Navbar({ toggle }: Props) {
               </Text>
             }
             onClick={() => setActive(index)}
-            styles={{
-              root: {
-                borderRadius: 12
-              }
-            }}
           />
         ))}
         <Space m="auto" />

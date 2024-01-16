@@ -1,7 +1,6 @@
-.Grid-root {
+.TextInput-input {
   background-color: light-dark(
     var(--mantine-color-gray-1),
     var(--mantine-color-dark-9)
   );
-  border-radius: var(--mantine-radius-lg);
 }
