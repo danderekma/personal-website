@@ -23,6 +23,7 @@ export function Contact() {
             variant="filled"
             label="Name"
             placeholder="Enter here"
+            c="dimmed"
             radius="md"
           />
         </Grid.Col>
@@ -34,6 +35,7 @@ export function Contact() {
             variant="filled"
             label="Email"
             placeholder="Enter here"
+            c="dimmed"
             radius="md"
           />
         </Grid.Col>
@@ -45,6 +47,7 @@ export function Contact() {
             variant="filled"
             label="Subject"
             placeholder="Enter here"
+            c="dimmed"
             radius="md"
           />
         </Grid.Col>
@@ -56,7 +59,9 @@ export function Contact() {
             variant="filled"
             label="Subject"
             placeholder="Enter here"
+            c="dimmed"
             radius="md"
+            rows={4}
           />
         </Grid.Col>
       </Grid>
