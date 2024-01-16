@@ -1,4 +1,11 @@
-import { Container, Title, Grid, TextInput, Space } from "@mantine/core";
+import {
+  Container,
+  Title,
+  Grid,
+  TextInput,
+  Textarea,
+  Space
+} from "@mantine/core";
 
 import styles from "./Contact.module.css";
 
@@ -16,6 +23,7 @@ export function Contact() {
             variant="filled"
             label="Name"
             placeholder="Enter here"
+            radius="md"
           />
         </Grid.Col>
         <Grid.Col span={1}>
@@ -26,6 +34,7 @@ export function Contact() {
             variant="filled"
             label="Email"
             placeholder="Enter here"
+            radius="md"
           />
         </Grid.Col>
         <Grid.Col span={2}>
@@ -36,6 +45,18 @@ export function Contact() {
             variant="filled"
             label="Subject"
             placeholder="Enter here"
+            radius="md"
+          />
+        </Grid.Col>
+        <Grid.Col span={4}>
+          <Textarea
+            classNames={{
+              input: styles["Textarea-input"]
+            }}
+            variant="filled"
+            label="Subject"
+            placeholder="Enter here"
+            radius="md"
           />
         </Grid.Col>
       </Grid>
