@@ -1,23 +1,96 @@
-import dynamic from "next/dynamic";
+"use client";
 
-import WelcomeLoading from "@/components/welcome/Loading";
-const Welcome = dynamic(() => import("@/components/welcome"), {
-  loading: () => <WelcomeLoading />,
-  ssr: false
-});
+import { useRouter } from "next/navigation";
+import {
+  useMantineColorScheme,
+  AppShell,
+  Flex,
+  ActionIcon,
+  Space,
+  Center,
+  Container,
+  Text
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 
-import Projects from "@/components/projects";
-import Contact from "@/components/contact";
+import {
+  IconSun,
+  IconMoonStars,
+  IconBrandGithub,
+  IconMenu2
+} from "@tabler/icons-react";
+
+import { Navbar, Welcome, Projects, Contact } from "@/components";
+
+import styles from "./page.module.css";
 
 export default function Home() {
+  const { toggleColorScheme } = useMantineColorScheme();
+  const [opened, { toggle }] = useDisclosure();
+  const router = useRouter();
+
   return (
-    <main className="bg-white bg-grid-sm-light bg-fixed bg-repeat transition-all dark:bg-gray dark:bg-grid-sm-dark sm:bg-grid-lg-light sm:dark:bg-grid-lg-dark">
-      <Welcome />
-      <Projects />
-      <Contact />
-      <footer className="w-full p-4 text-center font-sf-thin text-sm text-black/25 transition-all duration-100 dark:text-white/25 sm:text-base">
-        Created with ❤️ by Derek Ma <br /> © 2023
-      </footer>
+    <main>
+      <AppShell
+        navbar={{
+          width: 300,
+          breakpoint: "sm",
+          collapsed: { mobile: !opened }
+        }}
+        padding="md"
+      >
+        <Navbar toggle={toggle} />
+        <AppShell.Main className={styles["AppShell-main"]}>
+          <Flex justify="end" gap="sm">
+            <ActionIcon
+              size="xl"
+              color="dark"
+              variant="transparent"
+              mr="auto"
+              hiddenFrom="sm"
+              onClick={toggle}
+            >
+              <IconMenu2 />
+            </ActionIcon>
+            <ActionIcon
+              className={styles["ActionIcon-root"]}
+              size="xl"
+              variant="default"
+              onClick={() =>
+                router.push("https://github.com/danderekma/personal-website")
+              }
+            >
+              <IconBrandGithub />
+            </ActionIcon>
+            <ActionIcon
+              className={styles["ActionIcon-root"]}
+              size="xl"
+              variant="default"
+              onClick={toggleColorScheme}
+            >
+              <IconSun className={styles["light"]} />
+              <IconMoonStars className={styles["dark"]} />
+            </ActionIcon>
+          </Flex>
+          <Welcome />
+          <Space h="xl" />
+          <Projects />
+          <Space h="xl" />
+          <Contact />
+          <AppShell.Footer
+            className={styles["AppShell-footer"]}
+            withBorder={false}
+            bg="transparent"
+            py="sm"
+          >
+            <Container>
+              <Text ta="center" c="dark">
+                Created with ❤️ by Derek Ma <br /> © 2024
+              </Text>
+            </Container>
+          </AppShell.Footer>
+        </AppShell.Main>
+      </AppShell>
     </main>
   );
 }

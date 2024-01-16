@@ -1,0 +1,13 @@
+.TextInput-input {
+  background-color: light-dark(
+    var(--mantine-color-gray-1),
+    var(--mantine-color-dark-9)
+  );
+}
+
+.Textarea-input {
+  background-color: light-dark(
+    var(--mantine-color-gray-1),
+    var(--mantine-color-dark-9)
+  );
+}

@@ -1,0 +1,9 @@
+.Image-root {
+  object-position: left bottom;
+  cursor: pointer;
+}
+
+.Flex-root {
+  cursor: pointer;
+  border-radius: var(--mantine-radius-lg);
+}

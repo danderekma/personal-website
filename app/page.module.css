@@ -1,0 +1,45 @@
+.dark {
+  @mixin dark {
+    display: none;
+  }
+
+  @mixin light {
+    display: block;
+  }
+}
+
+.light {
+  @mixin light {
+    display: none;
+  }
+
+  @mixin dark {
+    display: block;
+  }
+}
+
+.AppShell-main {
+  background-color: light-dark(
+    var(--mantine-color-gray-0),
+    var(--mantine-color-dark-8)
+  );
+  background-image: light-dark(
+    url("../public/svgs/bg-grid-lg-light.svg"),
+    url("../public/svgs/bg-grid-lg-dark.svg")
+  );
+}
+
+.AppShell-footer {
+  position: relative;
+}
+
+.ActionIcon-root {
+  background-color: light-dark(
+    var(--mantine-color-gray-1),
+    var(--mantine-color-dark-9)
+  );
+  border-color: light-dark(
+    var(--mantine-color-gray-1),
+    var(--mantine-color-dark-9)
+  );
+}
