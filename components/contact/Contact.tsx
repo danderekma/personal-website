@@ -59,74 +59,95 @@ export function Contact() {
   };
 
   return (
-    <Container py="sm">
+    <Container id="contact" py="sm">
       <Title order={2}>Contact Me</Title>
       <Space h="lg" />
-      <Grid>
-        <Grid.Col span={3}>
-          <TextInput
-            classNames={{
-              input: styles["TextInput-input"]
+      <form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
+        <Grid>
+          <Grid.Col
+            span={{
+              base: 12,
+              xs: 3
             }}
-            variant="filled"
-            label="Name"
-            placeholder="Enter here"
-            c="dimmed"
-            radius="md"
-            {...form.getInputProps("name")}
-          />
-        </Grid.Col>
-        <Grid.Col span={3}>
-          <TextInput
-            classNames={{
-              input: styles["TextInput-input"]
-            }}
-            variant="filled"
-            label="Email"
-            placeholder="Enter here"
-            c="dimmed"
-            radius="md"
-            {...form.getInputProps("email")}
-          />
-        </Grid.Col>
-        <Grid.Col span={6}>
-          <TextInput
-            classNames={{
-              input: styles["TextInput-input"]
-            }}
-            variant="filled"
-            label="Subject"
-            placeholder="Enter here"
-            c="dimmed"
-            radius="md"
-            {...form.getInputProps("subject")}
-          />
-        </Grid.Col>
-        <Grid.Col span={12}>
-          <Textarea
-            classNames={{
-              input: styles["Textarea-input"]
-            }}
-            variant="filled"
-            label="Message"
-            placeholder="Enter here"
-            c="dimmed"
-            radius="md"
-            rows={4}
-            {...form.getInputProps("message")}
-          />
-        </Grid.Col>
-        <Grid.Col span={2} offset={10}>
-          <Button
-            variant="light"
-            radius="md"
-            fullWidth
-            onClick={() => handleSubmit(form.values)}
           >
-            Submit
-          </Button>
-        </Grid.Col>
-      </Grid>
+            <TextInput
+              classNames={{
+                input: styles["TextInput-input"]
+              }}
+              variant="filled"
+              label="Name"
+              placeholder="Enter here"
+              c="dimmed"
+              radius="md"
+              {...form.getInputProps("name")}
+            />
+          </Grid.Col>
+          <Grid.Col
+            span={{
+              base: 12,
+              xs: 3
+            }}
+          >
+            <TextInput
+              classNames={{
+                input: styles["TextInput-input"]
+              }}
+              variant="filled"
+              label="Email"
+              placeholder="Enter here"
+              c="dimmed"
+              radius="md"
+              {...form.getInputProps("email")}
+            />
+          </Grid.Col>
+          <Grid.Col
+            span={{
+              base: 12,
+              xs: 6
+            }}
+          >
+            <TextInput
+              classNames={{
+                input: styles["TextInput-input"]
+              }}
+              variant="filled"
+              label="Subject"
+              placeholder="Enter here"
+              c="dimmed"
+              radius="md"
+              {...form.getInputProps("subject")}
+            />
+          </Grid.Col>
+          <Grid.Col span={12}>
+            <Textarea
+              classNames={{
+                input: styles["Textarea-input"]
+              }}
+              variant="filled"
+              label="Message"
+              placeholder="Enter here"
+              c="dimmed"
+              radius="md"
+              rows={4}
+              {...form.getInputProps("message")}
+            />
+          </Grid.Col>
+          <Grid.Col
+            span={{
+              base: 12,
+              xs: 3
+            }}
+            offset={{
+              base: 0,
+              xs: 9
+            }}
+          >
+            <Button type="submit" variant="light" radius="md" fullWidth>
+              Submit
+            </Button>
+          </Grid.Col>
+        </Grid>
+      </form>
     </Container>
   );
 }

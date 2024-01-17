@@ -3,6 +3,7 @@ export type Props = {
 };
 
 export type NavItem = {
+  id: string;
   icon: React.ReactNode;
   label: string;
 };
