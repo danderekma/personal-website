@@ -2,7 +2,7 @@ import { Container, Text, Title, Space } from "@mantine/core";
 
 export function Welcome() {
   return (
-    <Container py="sm">
+    <Container id="welcome" py="sm">
       <Text fz="xl">Hey there! 👋</Text>
       <Title order={1}>I'm Derek Ma</Title>
       <Title order={3}>Software Engineer and Student at UC Davis</Title>

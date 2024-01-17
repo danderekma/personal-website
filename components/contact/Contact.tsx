@@ -59,7 +59,7 @@ export function Contact() {
   };
 
   return (
-    <Container py="sm">
+    <Container id="contact" py="sm">
       <Title order={2}>Contact Me</Title>
       <Space h="lg" />
       <form onSubmit={form.onSubmit((values) => handleSubmit(values))}>

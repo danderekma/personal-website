@@ -21,7 +21,7 @@ export function Projects() {
   const router = useRouter();
 
   return (
-    <Container py="sm">
+    <Container id="projects" py="sm">
       <Title order={2}>Projects</Title>
       <Space h="lg" />
       <SimpleGrid

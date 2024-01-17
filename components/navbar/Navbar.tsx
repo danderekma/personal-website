@@ -1,5 +1,7 @@
-import { useState } from "react";
+"use client";
+
 import { useRouter } from "next/navigation";
+import { useScroll } from "@/hooks/useScroll";
 import {
   AppShell,
   Stack,
@@ -33,21 +35,27 @@ import styles from "./Navbar.module.css";
 
 const data: NavItem[] = [
   {
+    id: "welcome",
     icon: <IconHome />,
     label: "Home"
   },
   {
+    id: "projects",
     icon: <IconFolder />,
     label: "Projects"
   },
   {
+    id: "contact",
     icon: <IconPhone />,
     label: "Contact"
   }
 ];
 
 export function Navbar({ toggle }: Props) {
-  const [active, setActive] = useState(0);
+  const activeId = useScroll(
+    data.map((item) => item.id),
+    10
+  );
   const router = useRouter();
 
   return (
@@ -83,18 +91,22 @@ export function Navbar({ toggle }: Props) {
           radius="100%"
         />
         <Space h="lg" />
-        {data.map((item, index) => (
+        {data.map((item) => (
           <NavLink
             className={styles["NavLink-root"]}
             key={item.label}
-            active={index === active}
+            active={activeId === item.id}
             leftSection={item.icon}
             label={
-              <Text fz="lg" fw={active === index ? "bold" : "normal"}>
+              <Text fz="lg" fw={activeId === item.id ? "bold" : "normal"}>
                 {item.label}
               </Text>
             }
-            onClick={() => setActive(index)}
+            onClick={() => {
+              document
+                .getElementById(item.id)
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
           />
         ))}
         <Space m="auto" />
