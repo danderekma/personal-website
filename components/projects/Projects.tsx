@@ -14,6 +14,7 @@ import { Card } from "./card/Card";
 import AggieExplorer from "@/public/images/aggie-explorer.jpeg";
 import NVSI from "@/public/images/nvsi.svg";
 import TrainingTool from "@/public/images/training-tool.svg";
+import { IconScale } from "@tabler/icons-react";
 
 import styles from "./Projects.module.css";
 
@@ -88,6 +89,22 @@ export function Projects() {
                 src={TrainingTool}
                 alt="training-tool.svg"
               />
+            </Flex>
+          }
+        />
+        <Card
+          name="Balancing the Scale"
+          description="A static web page dedicated to bringing about environmental awareness of modern artificial intelligence technologies."
+          image={
+            <Flex
+              className={styles["Flex-root"]}
+              bg="white"
+              h={250}
+              justify="center"
+              align="center"
+              onClick={() => router.push("https://balancingthescale.tech/")}
+            >
+              <IconScale color="black" size={72} />
             </Flex>
           }
         />
