@@ -31,6 +31,7 @@ export function Projects() {
           xs: 2
         }}
         spacing="xl"
+        verticalSpacing="xl"
       >
         <Card
           name="AggieExplorer"
