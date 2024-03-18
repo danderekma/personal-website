@@ -12,7 +12,7 @@ import NextImage from "next/image";
 import { Card } from "./card/Card";
 
 import AggieExplorer from "@/public/images/aggie-explorer.jpeg";
-import NVSI from "@/public/images/nvsi.svg";
+import Triplet from "@/public/images/triplet.svg";
 import TrainingTool from "@/public/images/training-tool.svg";
 import { IconScale } from "@tabler/icons-react";
 
@@ -54,19 +54,26 @@ export function Projects() {
           }
         />
         <Card
-          name="UC Davis New Vietnam Studies Initiative"
-          description="A landing page for the New Vietnam Studies Initiative at UC Davis created with Next.js."
+          name="Triplet"
+          description="An iOS application that aims to help users effortlessly create, coordinate, and organize their travel plans."
           image={
-            <Image
-              className={styles["Image-root"]}
-              component={NextImage}
-              src={NVSI}
-              alt="nvsi.svg"
+            <Flex
+              className={styles["Flex-root"]}
+              bg="white"
               h={250}
-              fit="cover"
-              radius="lg"
-              onClick={() => router.push("https://newvietnam.ucdavis.edu")}
-            />
+              justify="center"
+              align="center"
+              onClick={() =>
+                router.push("https://github.com/calchenny/triplet")
+              }
+            >
+              <Image
+                component={NextImage}
+                src={Triplet}
+                alt="triplet.svg"
+                width={135}
+              />
+            </Flex>
           }
         />
         <Card

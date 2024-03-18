@@ -1,5 +1,3 @@
-"use client";
-
 import { useRouter } from "next/navigation";
 import { useScroll } from "@/hooks/useScroll";
 import {
