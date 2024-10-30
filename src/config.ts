@@ -9,9 +9,9 @@ import type {
 } from "./types/config";
 
 export const identity: Identity = {
-  name: "Tim Witzdam",
-  logo: "/logo.webp",
-  email: "tim@witzdam.com"
+  name: "Derek Ma",
+  logo: "/logo.png",
+  email: "danderekma@gmail.com"
 };
 
 export const navBarLinks: NavBarLink[] = [
@@ -35,6 +35,12 @@ export const navBarLinks: NavBarLink[] = [
 
 export const socialLinks: SocialLink[] = [
   {
+    title: "LinkedIn",
+    url: "https://github.com/TimWitzdam",
+    icon: "mdi:linkedin",
+    external: true
+  },
+  {
     title: "GitHub",
     url: "https://github.com/TimWitzdam",
     icon: "mdi:github",
@@ -55,7 +61,7 @@ export const homePageContent: HomePageContent = {
       "Full time student from Germany who loves building cool things using code.",
     image: identity.logo
   },
-  role: "Student & Software Developer",
+  role: "Software Engineer",
   description:
     "I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.",
   socialLinks: socialLinks,
@@ -102,7 +108,7 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
         title: "Software Developer",
         company: {
           name: "Freelance",
-          image: "/logo.webp",
+          image: "/logo.png",
           url: "https://github.com/TimWitzdam"
         },
         date: "2021 - Present"
@@ -111,7 +117,7 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
         title: "Software Developer",
         company: {
           name: "Freelance",
-          image: "/logo.webp",
+          image: "/logo.png",
           url: "https://github.com/TimWitzdam"
         },
         date: "2019 - 2021"
