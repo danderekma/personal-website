@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import { projectsPageContent } from "../config";
 import ProjectCard from "../components/ProjectCard.astro";
+
+export const prerender = true;
 ---
 
 <Layout seo={projectsPageContent.seo}>
