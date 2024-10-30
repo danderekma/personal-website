@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        "gray-bg": "#2E2E2E",
-      },
-    },
+        "gray-bg": "#21272E"
+      }
+    }
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography")]
 };
