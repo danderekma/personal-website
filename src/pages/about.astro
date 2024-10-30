@@ -5,6 +5,8 @@ import { aboutPageContent } from "../config";
 import ResumeItem from "../components/ResumeItem.astro";
 import { Markdown } from "@astropub/md";
 import SocialLinkBox from "../components/SocialLinkBox.astro";
+
+export const prerender = true;
 ---
 
 <Layout seo={aboutPageContent.seo}>
