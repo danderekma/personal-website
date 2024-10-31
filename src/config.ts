@@ -95,12 +95,13 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
       alt: "Left Picture"
     },
     image_r: {
-      url: "/demo-1.jpg",
+      url: "/travel.jpeg",
       alt: "Right Picture"
     }
   },
   work: {
-    description: `I've worked with a variety of technologies and tools to build cool things. Here are some of the projects I've worked on.`, // Markdown is supported
+    description:
+      "I specialize in mobile and web development. But I am always learning new things. Here are some of the places I have worked.",
     items: [
       {
         title: "Front-End Engineer I",
@@ -135,7 +136,6 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
     ]
   },
   connect: {
-    description: `I'm always interested in meeting new people and learning new things. Feel free to connect with me on any of the following platforms.`, // Markdown is supported
     links: socialLinks
   }
 };

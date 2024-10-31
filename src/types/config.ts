@@ -64,7 +64,6 @@ export type AboutPageContent = {
     items: ResumeItem[];
   };
   connect: {
-    description: string;
     links: SocialLink[];
   };
 };
