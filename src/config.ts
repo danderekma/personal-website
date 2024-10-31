@@ -36,19 +36,19 @@ export const navBarLinks: NavBarLink[] = [
 export const socialLinks: SocialLink[] = [
   {
     title: "LinkedIn",
-    url: "https://github.com/TimWitzdam",
+    url: "https://www.linkedin.com/in/danderekma",
     icon: "mdi:linkedin",
     external: true
   },
   {
     title: "GitHub",
-    url: "https://github.com/TimWitzdam",
+    url: "https://github.com/danderekma",
     icon: "mdi:github",
     external: true
   },
   {
     title: "Mail",
-    url: "mailto:tim@witzdam.com",
+    url: "mailto:danderekma@gmail.com",
     icon: "mdi:email"
   }
 ];
@@ -56,23 +56,22 @@ export const socialLinks: SocialLink[] = [
 // Home (/)
 export const homePageContent: HomePageContent = {
   seo: {
-    title: "Tim Witzdam",
-    description:
-      "Full time student from Germany who loves building cool things using code.",
+    title: "Derek Ma",
+    description: "UC Davis Alumni and Front-End Engineer at AWS.",
     image: identity.logo
   },
   role: "Software Engineer",
   description:
-    "I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.",
+    "Hey there! I'm Derek Ma, an UC Davis Alumni and Front-End Engineer at Amazon Web Services with interests in mobile and full stack web development.",
   socialLinks: socialLinks,
   links: [
     {
-      title: "My Projects",
-      url: "/projects"
-    },
-    {
       title: "About Me",
       url: "/about"
+    },
+    {
+      title: "My Projects",
+      url: "/projects"
     }
   ]
 };
@@ -80,9 +79,8 @@ export const homePageContent: HomePageContent = {
 // About (/about)
 export const aboutPageContent: AboutPageContent = {
   seo: {
-    title: "About | Tim Witzdam",
-    description:
-      "Full time student from Germany who loves building cool things using code.",
+    title: "About | Derek Ma",
+    description: "UC Davis Alumni and Front-End Engineer at AWS.",
     image: identity.logo
   },
   subtitle: "Some information about myself",
@@ -105,22 +103,34 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
     description: `I've worked with a variety of technologies and tools to build cool things. Here are some of the projects I've worked on.`, // Markdown is supported
     items: [
       {
-        title: "Software Developer",
+        title: "Front-End Engineer I",
         company: {
-          name: "Freelance",
-          image: "/logo.png",
-          url: "https://github.com/TimWitzdam"
+          name: "Amazon Web Services (AWS)",
+          image:
+            "https://media.licdn.com/dms/image/v2/C560BAQER_QnUTXrPJw/company-logo_200_200/company-logo_200_200/0/1670264051233/amazon_web_services_logo?e=1738195200&v=beta&t=WESt3uBzAtQ9DNviDbNym5PgJBySdWSOlnEkeysfK_c",
+          url: "https://www.linkedin.com/company/amazon-web-services"
         },
-        date: "2021 - Present"
+        date: "October 2024 - Present"
       },
       {
-        title: "Software Developer",
+        title: "Software Engineer Intern",
         company: {
-          name: "Freelance",
-          image: "/logo.png",
+          name: "Optiwise.ai",
+          image:
+            "https://media.licdn.com/dms/image/v2/D4D0BAQF51T7GBBGhmw/company-logo_200_200/company-logo_200_200/0/1664538589483/optiwise_ai_logo?e=1738195200&v=beta&t=xfrvavuiuI-wQ3BUX0L6DLAYZPOUZ8klL4ggZpaKEp8",
           url: "https://github.com/TimWitzdam"
         },
-        date: "2019 - 2021"
+        date: "January 2024 - June 2024"
+      },
+      {
+        title: "Infrastructure Lead",
+        company: {
+          name: "CodeLab",
+          image:
+            "https://media.licdn.com/dms/image/v2/C560BAQGpfM3qv7TaBQ/company-logo_200_200/company-logo_200_200/0/1674088646470/codelabdavis_logo?e=1738195200&v=beta&t=YIt8DmtRWzzfA5OCLAL3LWMfQc7v__8pZiPksjyloi8",
+          url: "https://www.linkedin.com/company/codelabdavis"
+        },
+        date: "June 2023 - June 2024"
       }
     ]
   },
@@ -133,7 +143,7 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
 // Projects (/projects)
 export const projectsPageContent: ProjectPageContent = {
   seo: {
-    title: "Projects | Tim Witzdam",
+    title: "Projects | Derek Ma",
     description: "Check out what I've been working on.",
     image: identity.logo
   },
