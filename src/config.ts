@@ -62,7 +62,7 @@ export const homePageContent: HomePageContent = {
   },
   role: "Software Engineer",
   description:
-    "Hey there! I'm Derek Ma, an UC Davis Alumni and Front-End Engineer at Amazon Web Services with interests in mobile and full stack web development.",
+    "Hey there! I'm Derek Ma, a UC Davis Alumni and Front-End Engineer at Amazon Web Services with interests in mobile and full stack web development.",
   socialLinks: socialLinks,
   links: [
     {
@@ -150,25 +150,36 @@ export const projectsPageContent: ProjectPageContent = {
   subtitle: "Check out what I've been working on.",
   projects: [
     {
-      title: "Project 1",
-      description: "Project 1 Description",
-      image: "/demo-2.jpg",
+      title: "Triplet",
+      description:
+        "An iOS application that aims to help users effortlessly create, coordinate, and organize their travel plans.",
+      image: "/triplet.jpeg",
       year: "2024",
-      url: "https://github.com/TimWitzdam"
+      url: "https://github.com/calchenny/triplet"
     },
     {
-      title: "Project 1",
-      description: "Project 1 Description",
-      image: "/demo-2.jpg",
-      year: "2024",
-      url: "https://github.com/TimWitzdam"
+      title: "Balancing the Scale",
+      description:
+        "A static web page dedicated to bringing about environmental awareness of modern artificial intelligence technologies.",
+      image: "/scale.jpeg",
+      year: "2023",
+      url: "https://balancingthescale.tech"
     },
     {
-      title: "Project 1",
-      description: "Project 1 Description",
-      image: "/demo-2.jpg",
-      year: "2024",
-      url: "https://github.com/TimWitzdam"
+      title: "CodeLab Training Tool",
+      description:
+        "An internal training tool that allows associates to create and consume educational material and track personal progress.",
+      image: "/training-tool.jpeg",
+      year: "2022 - 2023",
+      url: "https://codelabdavis.medium.com/training-tool-a547c6d311a0"
+    },
+    {
+      title: "AggieExplorer",
+      description:
+        "A full-stack web application developed to provide grading distributions and enrollment statistics for UC Davis students.",
+      image: "/aggie-explorer.jpeg",
+      year: "2021 - 2022",
+      url: "https://codelabdavis.medium.com/aggieexplorer-605c9d67965c"
     }
   ]
 };
