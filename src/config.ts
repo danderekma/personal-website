@@ -62,7 +62,7 @@ export const homePageContent: HomePageContent = {
   },
   role: "Software Engineer",
   description:
-    "Hey there! I'm Derek Ma, a UC Davis Alumni and Front-End Engineer at Amazon Web Services with interests in mobile and full stack web development.",
+    "Hey there! I'm Derek, a UC Davis Alumni and Front-End Engineer at Amazon Web Services with interests in mobile and full stack web development.",
   socialLinks: socialLinks,
   links: [
     {
@@ -86,16 +86,16 @@ export const aboutPageContent: AboutPageContent = {
   subtitle: "Some information about myself",
   about: {
     description: `
-I'm Tim Witzdam, a full time student from Germany who also loves building cool things using code.
+I'm Derek, a graduate from UC Davis with a degree in Computer Science and, currently, a Front-End Engineer at Amazon Web Services.
 <br/><br/>
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque placeat est architecto tempora voluptatem sit suscipit aspernatur? <br/><br/>
 Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium consectetur nemo vero officia itaque.`, // Markdown is supported
     image_l: {
-      url: "/demo-1.jpg",
+      url: "/banquet.jpeg",
       alt: "Left Picture"
     },
     image_r: {
-      url: "/travel.jpeg",
+      url: "/derek.jpeg",
       alt: "Right Picture"
     }
   },
