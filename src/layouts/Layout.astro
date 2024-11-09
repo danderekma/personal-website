@@ -97,7 +97,7 @@ const { seo } = Astro.props;
               navBarLinks.map((link) => (
                 <li>
                   <a
-                    class="group px-4 py-2 rounded-lg dark:hover:bg-light-gray opacity-60 hover:opacity-100 transition-all"
+                    class="group px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-light-gray opacity-60 hover:opacity-100 transition-all"
                     href={link.url}
                     target={link.external ? "_blank" : "_self"}
                   >
@@ -115,7 +115,7 @@ const { seo } = Astro.props;
             >
             <div
               id="link-menu"
-              class="absolute p-2 right-0 bg-light-gray rounded-lg w-44 transition-opacity ease-in-out duration-300 opacity-0 z-40"
+              class="absolute p-2 right-0 bg-gray-100 dark:bg-light-gray rounded-lg w-44 transition-opacity ease-in-out duration-300 opacity-0 z-40"
             >
               <ul>
                 {
