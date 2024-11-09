@@ -62,7 +62,7 @@ export const homePageContent: HomePageContent = {
   },
   role: "Software Engineer",
   description:
-    "Hey there! I'm Derek, a UC Davis Alumni and Front-End Engineer at Amazon Web Services located in the San Francisco Bay Area.",
+    "Hey there! I'm Derek, a Front-End Engineer at Amazon Web Services currently located in the San Francisco Bay Area.",
   socialLinks: socialLinks,
   links: [
     {
