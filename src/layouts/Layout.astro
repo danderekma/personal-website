@@ -47,7 +47,7 @@ const { seo } = Astro.props;
   });
 </script>
 
-<html lang="en">
+<html lang="en" class="dark:bg-dark-gray dark:text-white transition-colors">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -58,6 +58,24 @@ const { seo } = Astro.props;
     <meta property="og:title" content={seo.title} />
     <meta property="og:description" content={seo.description} />
     <meta property="og:image" content={seo.image} />
+    <script is:inline>
+      const theme = (() => {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+      window.localStorage.setItem("theme", theme);
+    </script>
   </head>
   <body>
     <header>
@@ -79,7 +97,7 @@ const { seo } = Astro.props;
               navBarLinks.map((link) => (
                 <li>
                   <a
-                    class="group px-4 py-2 rounded-lg hover:bg-gray-bg opacity-60 hover:opacity-100 transition-all"
+                    class="group px-4 py-2 rounded-lg dark:hover:bg-light-gray opacity-60 hover:opacity-100 transition-all"
                     href={link.url}
                     target={link.external ? "_blank" : "_self"}
                   >
@@ -97,7 +115,7 @@ const { seo } = Astro.props;
             >
             <div
               id="link-menu"
-              class="absolute p-2 right-0 bg-gray-bg rounded-lg w-44 transition-opacity ease-in-out duration-300 opacity-0 z-40"
+              class="absolute p-2 right-0 bg-light-gray rounded-lg w-44 transition-opacity ease-in-out duration-300 opacity-0 z-40"
             >
               <ul>
                 {
@@ -117,7 +135,7 @@ const { seo } = Astro.props;
             </div>
           </div>
         </nav>
-        <div>
+        <div class="flex gap-1">
           <a
             href=`mailto:${identity.email}`
             class="block p-2 opacity-60 hover:opacity-100 transition-opacity"
@@ -125,6 +143,24 @@ const { seo } = Astro.props;
           >
             <Icon name="mdi:email" width={20} height={20} />
           </a>
+          <button
+            id="theme-toggle"
+            class="block p-2 opacity-60 hover:opacity-100 transition-opacity"
+          >
+            <Icon name="mdi:white-balance-sunny" class="hidden dark:block" width={20} height={20} />
+            <Icon name="mdi:moon-waning-crescent" class="dark:hidden" width={20} height={20} />
+          </button>
+          <script>
+            document.getElementById("theme-toggle")?.addEventListener("click", () => {
+              if (localStorage.theme === "dark") {
+                localStorage.theme = "light";
+                document.documentElement.classList.remove("dark");
+              } else {
+                localStorage.theme = "dark";
+                document.documentElement.classList.add("dark");
+              }
+            });
+          </script>
         </div>
       </div>
     </header>
@@ -140,7 +176,6 @@ const { seo } = Astro.props;
 
   html {
     font-family: "Inter", sans-serif;
-    background: #1B2128;
   }
 
   * {
@@ -148,7 +183,6 @@ const { seo } = Astro.props;
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-    color: white;
   }
 
   code {

@@ -1,12 +1,12 @@
-import { transform } from "typescript";
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "selector",
   theme: {
     extend: {
       colors: {
-        "gray-bg": "#21272E"
+        "light-gray": "#21272E",
+        "dark-gray": "#1B2128"
       },
       keyframes: {
         appear: {
