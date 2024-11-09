@@ -86,10 +86,7 @@ export const aboutPageContent: AboutPageContent = {
   subtitle: "Some information about myself",
   about: {
     description: `
-I'm Derek, a graduate from UC Davis with a degree in Computer Science and, currently, a Front-End Engineer at Amazon Web Services.
-<br/><br/>
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque placeat est architecto tempora voluptatem sit suscipit aspernatur? <br/><br/>
-Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium consectetur nemo vero officia itaque.`, // Markdown is supported
+I'm Derek, a graduate from UC Davis with a degree in Computer Science and currently a Front-End Engineer at Amazon Web Services. <br><br> I'm incredibly passionate about software engineering and building impactful user-centric products. <br><br> Outside of work, I love attending live concerts, cooking, reading, watching movies, trying new foods, and traveling.`,
     image_l: {
       url: "/banquet.jpeg",
       alt: "Left Picture"
@@ -101,7 +98,7 @@ Facere quibusdam reiciendis, distinctio sunt praesentium error accusantium conse
   },
   work: {
     description:
-      "I specialize in mobile and web development. But I am always learning new things. Here are some of the places I have worked.",
+      "I primarily focus on mobile and web development. But I am always learning new things. Here are some of the places I have worked.",
     items: [
       {
         title: "Front-End Engineer I",
@@ -187,7 +184,7 @@ export const projectsPageContent: ProjectPageContent = {
 // Blog (/blog)
 export const blogPageContent: BlogPageContent = {
   seo: {
-    title: "Blog | Tim Witzdam",
+    title: "Blog | Derek Ma",
     description: "Thoughts, stories and ideas.",
     image: identity.logo
   },
