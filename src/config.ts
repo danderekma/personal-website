@@ -116,7 +116,7 @@ I'm Derek, a graduate from UC Davis with a degree in Computer Science and curren
           name: "Optiwise.ai",
           image:
             "https://media.licdn.com/dms/image/v2/D4D0BAQF51T7GBBGhmw/company-logo_200_200/company-logo_200_200/0/1664538589483/optiwise_ai_logo?e=1738195200&v=beta&t=xfrvavuiuI-wQ3BUX0L6DLAYZPOUZ8klL4ggZpaKEp8",
-          url: "https://github.com/TimWitzdam"
+          url: "https://www.linkedin.com/company/optiwise-ai"
         },
         date: "January 2024 - June 2024"
       },
