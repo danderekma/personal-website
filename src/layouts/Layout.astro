@@ -23,11 +23,11 @@ const { seo } = Astro.props;
   linkMenuButton.addEventListener("click", () => {
     if (linkMenu.classList.contains("opacity-0")) {
       linkMenu.classList.remove("pointer-events-none");
-      linkMenu.classList.remove("opacity-0");
+      linkMenu.classList.remove("opacity-0", "invisible");
       openIndicator.innerText = "-";
     } else {
       linkMenu.classList.add("pointer-events-none");
-      linkMenu.classList.add("opacity-0");
+      linkMenu.classList.add("opacity-0", "invisible");
       openIndicator.innerText = "+";
     }
   });
@@ -41,7 +41,7 @@ const { seo } = Astro.props;
 
     if (!isLinkMenuButtonClicked && !isLinkMenuClicked) {
       linkMenu.classList.add("pointer-events-none");
-      linkMenu.classList.add("opacity-0");
+      linkMenu.classList.add("opacity-0", "invisible");
       openIndicator.innerText = "+";
     }
   });
@@ -115,7 +115,7 @@ const { seo } = Astro.props;
             >
             <div
               id="link-menu"
-              class="absolute p-2 right-0 bg-gray-100 dark:bg-light-gray rounded-lg w-44 transition-opacity ease-in-out duration-300 opacity-0 z-40"
+              class="absolute p-2 right-0 bg-gray-100 dark:bg-light-gray rounded-lg w-44 transition-all ease-in-out duration-300 opacity-0 invisible z-40"
             >
               <ul>
                 {
