@@ -105,7 +105,7 @@ I'm Derek, a graduate from UC Davis with a degree in Computer Science and curren
         company: {
           name: "Amazon Web Services (AWS)",
           image:
-            "https://media.licdn.com/dms/image/v2/C560BAQER_QnUTXrPJw/company-logo_200_200/company-logo_200_200/0/1670264051233/amazon_web_services_logo?e=1738195200&v=beta&t=WESt3uBzAtQ9DNviDbNym5PgJBySdWSOlnEkeysfK_c",
+            "https://media.licdn.com/dms/image/v2/D4E0BAQE0fp2sCqnVLg/company-logo_200_200/company-logo_200_200/0/1738855736997/amazon_web_services_logo?e=1747267200&v=beta&t=rtGBlJ7U1LIR5K-ZzuJ0WkesRPA2inh3LJNjFJqNd0o",
           url: "https://www.linkedin.com/company/amazon-web-services"
         },
         date: "October 2024 - Present"
@@ -115,7 +115,7 @@ I'm Derek, a graduate from UC Davis with a degree in Computer Science and curren
         company: {
           name: "Optiwise.ai",
           image:
-            "https://media.licdn.com/dms/image/v2/D4D0BAQF51T7GBBGhmw/company-logo_200_200/company-logo_200_200/0/1664538589483/optiwise_ai_logo?e=1738195200&v=beta&t=xfrvavuiuI-wQ3BUX0L6DLAYZPOUZ8klL4ggZpaKEp8",
+            "https://media.licdn.com/dms/image/v2/D4D0BAQF51T7GBBGhmw/company-logo_200_200/company-logo_200_200/0/1664538589483/optiwise_ai_logo?e=1747267200&v=beta&t=Cmt2NGhE8RFZQIjB2FUFDpYWQ2MBskOErTXRqgzImYA",
           url: "https://www.linkedin.com/company/optiwise-ai"
         },
         date: "January 2024 - June 2024"
@@ -125,7 +125,7 @@ I'm Derek, a graduate from UC Davis with a degree in Computer Science and curren
         company: {
           name: "CodeLab",
           image:
-            "https://media.licdn.com/dms/image/v2/C560BAQGpfM3qv7TaBQ/company-logo_200_200/company-logo_200_200/0/1674088646470/codelabdavis_logo?e=1738195200&v=beta&t=YIt8DmtRWzzfA5OCLAL3LWMfQc7v__8pZiPksjyloi8",
+            "https://media.licdn.com/dms/image/v2/C560BAQGpfM3qv7TaBQ/company-logo_200_200/company-logo_200_200/0/1674088646470/codelabdavis_logo?e=1747267200&v=beta&t=nPMeRG1VWyvI3zu2JfjJmKnBSBgCdNyN-ii5xxFy7dQ",
           url: "https://www.linkedin.com/company/codelabdavis"
         },
         date: "June 2023 - June 2024"
