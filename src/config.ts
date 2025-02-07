@@ -10,7 +10,7 @@ import type {
 
 export const identity: Identity = {
   name: "Derek Ma",
-  logo: "/logo.png",
+  logo: "/headshot.jpeg",
   email: "danderekma@gmail.com"
 };
 
