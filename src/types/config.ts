@@ -1,3 +1,5 @@
+import type { ImageMetadata } from "astro";
+
 export type NavBarLink = {
   title: string;
   url: string;
@@ -39,7 +41,7 @@ export type ResumeItem = {
   title: string;
   company: {
     name: string;
-    image: string;
+    image: ImageMetadata;
     url: string;
   };
   date: string;
