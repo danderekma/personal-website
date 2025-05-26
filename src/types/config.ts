@@ -70,20 +70,6 @@ export type AboutPageContent = {
   };
 };
 
-export type Project = {
-  title: string;
-  description: string;
-  image: string;
-  year: string;
-  url: string;
-};
-
-export type ProjectPageContent = {
-  seo: SEOInfo;
-  subtitle: string;
-  projects: Project[];
-};
-
 export type BlogPageContent = {
   seo: SEOInfo;
   subtitle: string;

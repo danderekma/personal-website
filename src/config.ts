@@ -3,7 +3,6 @@ import type {
   SocialLink,
   Identity,
   AboutPageContent,
-  ProjectPageContent,
   BlogPageContent,
   HomePageContent
 } from "./types/config";
@@ -25,10 +24,6 @@ export const navBarLinks: NavBarLink[] = [
   {
     title: "About",
     url: "/about"
-  },
-  {
-    title: "Projects",
-    url: "/projects"
   },
   {
     title: "Blog",
@@ -73,8 +68,8 @@ export const homePageContent: HomePageContent = {
       url: "/about"
     },
     {
-      title: "My Projects",
-      url: "/projects"
+      title: "My Blog",
+      url: "/blog"
     }
   ]
 };
@@ -135,50 +130,6 @@ I'm Derek, a graduate from UC Davis with a degree in Computer Science and curren
   connect: {
     links: socialLinks
   }
-};
-
-// Projects (/projects)
-export const projectsPageContent: ProjectPageContent = {
-  seo: {
-    title: "Projects | Derek Ma",
-    description: "Check out what I've been working on.",
-    image: identity.logo
-  },
-  subtitle: "Check out what I've been working on.",
-  projects: [
-    {
-      title: "Triplet",
-      description:
-        "An iOS application that aims to help users effortlessly create, coordinate, and organize their travel plans.",
-      image: "/triplet.jpeg",
-      year: "2024",
-      url: "https://github.com/calchenny/triplet"
-    },
-    {
-      title: "Balancing the Scale",
-      description:
-        "A static web page dedicated to bringing about environmental awareness of modern artificial intelligence technologies.",
-      image: "/scale.jpeg",
-      year: "2023",
-      url: "https://balancingthescale.tech"
-    },
-    {
-      title: "CodeLab Training Tool",
-      description:
-        "An internal training tool that allows associates to create and consume educational material and track personal progress.",
-      image: "/training-tool.jpeg",
-      year: "2022 - 2023",
-      url: "https://codelabdavis.medium.com/training-tool-a547c6d311a0"
-    },
-    {
-      title: "AggieExplorer",
-      description:
-        "A full-stack web application developed to provide grading distributions and enrollment statistics for UC Davis students.",
-      image: "/aggie-explorer.jpeg",
-      year: "2021 - 2022",
-      url: "https://codelabdavis.medium.com/aggieexplorer-605c9d67965c"
-    }
-  ]
 };
 
 // Blog (/blog)
