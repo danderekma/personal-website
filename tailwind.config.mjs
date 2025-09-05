@@ -6,7 +6,8 @@ export default {
     extend: {
       colors: {
         "light-gray": "#21272E",
-        "dark-gray": "#1B2128"
+        "dark-gray": "#1B2128",
+        "alabaster-white": "#FAFAFA"
       },
       keyframes: {
         appear: {
