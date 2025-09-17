@@ -12,7 +12,7 @@ export const prerender = true;
 <Layout seo={aboutPageContent.seo}>
   <section class="mt-10 max-w-2xl mx-auto px-6">
     <h1 class="font-bold text-3xl mb-1">About</h1>
-    <p class="opacity-60 mb-10">{aboutPageContent.subtitle}</p>
+    <p class="opacity-70 mb-10">{aboutPageContent.subtitle}</p>
     <div class="mb-14">
       <Markdown of={aboutPageContent.about.description} />
     </div>
@@ -34,7 +34,7 @@ export const prerender = true;
     </div>
   </section>
   <section class="my-32 max-w-2xl mx-auto px-6 sm:flex sm:gap-16">
-    <h2 class="mb-8 sm:mb-0 opacity-60">Work</h2>
+    <h2 class="mb-8 sm:mb-0 opacity-70">Work</h2>
     <div>
       <div class="mb-6">
         <Markdown of={aboutPageContent.work.description} />
@@ -45,7 +45,7 @@ export const prerender = true;
     </div>
   </section>
   <section class="mt-32 max-w-2xl mx-auto px-6 sm:flex sm:gap-10">
-    <h2 class="mb-8 sm:mb-0 opacity-60">Connect</h2>
+    <h2 class="mb-8 sm:mb-0 opacity-70">Connect</h2>
       <div class="grid grid-cols-2 gap-2 group w-full">
         {
           aboutPageContent.connect.links.map((item) => (

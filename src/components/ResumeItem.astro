@@ -9,7 +9,7 @@ const { title, company, date } = Astro.props;
 
 <a
   href={company.url}
-  class="py-3 flex items-center justify-between group-hover:opacity-60 hover:!opacity-100 transition-opacity"
+  class="py-3 flex items-center justify-between group-hover:opacity-70 hover:!opacity-100 transition-opacity"
 >
   <div class="flex items-center gap-4">
     <Image
@@ -21,8 +21,8 @@ const { title, company, date } = Astro.props;
     />
     <div>
       <h3 class="font-medium">{title}</h3>
-      <p class="text-sm opacity-60">{company.name}</p>
+      <p class="text-sm opacity-70">{company.name}</p>
     </div>
   </div>
-  <p class="text-sm opacity-60">{date}</p>
+  <p class="text-sm opacity-70">{date}</p>
 </a>

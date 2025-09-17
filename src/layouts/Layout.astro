@@ -83,7 +83,7 @@ const { seo } = Astro.props;
         class="px-6 py-6 max-w-2xl mx-auto flex items-center justify-between"
       >
         <a href="/">
-          <h1 class="text-lg font-bold opacity-60">DM</h1>
+          <h1 class="text-lg font-bold opacity-70">DM</h1>
         </a>
         <nav class="ml-auto mr-6 sm:m-0">
           <ul class="hidden sm:flex sm:items-center sm:gap-2">
@@ -91,7 +91,7 @@ const { seo } = Astro.props;
               navBarLinks.map((link) => (
                 <li>
                   <a
-                    class="group px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-light-gray opacity-60 hover:opacity-100 transition-all"
+                    class="group px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-light-gray opacity-70 hover:opacity-100 transition-all"
                     href={link.url}
                     target={link.external ? "_blank" : "_self"}
                   >
@@ -104,7 +104,7 @@ const { seo } = Astro.props;
           <div class="relative sm:hidden">
             <button
               id="link-menu-button"
-              class="relative font-medium opacity-60 p-4"
+              class="relative font-medium opacity-70 p-4"
               >Menu <span id="open-indicator">+</span></button
             >
             <div
@@ -132,14 +132,14 @@ const { seo } = Astro.props;
         <div class="flex gap-1">
           <a
             href=`mailto:${identity.email}`
-            class="block p-2 opacity-60 hover:opacity-100 transition-opacity"
+            class="block p-2 opacity-70 hover:opacity-100 transition-opacity"
             aria-label="Email"
           >
             <Icon name="mdi:email" width={20} height={20} />
           </a>
           <button
             id="theme-toggle"
-            class="block p-2 opacity-60 hover:opacity-100 transition-opacity"
+            class="block p-2 opacity-70 hover:opacity-100 transition-opacity"
           >
             <Icon name="mdi:white-balance-sunny" class="hidden dark:block" width={20} height={20} />
             <Icon name="mdi:moon-waning-crescent" class="dark:hidden" width={20} height={20} />
