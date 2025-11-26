@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import { navBarLinks, identity } from "../config";
 import type { SEOInfo } from "../types/config";
@@ -57,7 +56,6 @@ const { seo } = Astro.props;
     <meta name="description" content={seo.description} />
     <meta property="og:title" content={seo.title} />
     <meta property="og:description" content={seo.description} />
-    <meta property="og:image" content={seo.image} />
     <script is:inline>
       const theme = (() => {
         if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
@@ -192,12 +190,16 @@ const { seo } = Astro.props;
   }
 
   .hover-underline {
-    text-decoration: underline 1px rgba(0, 0, 0, 0);
+    text-decoration: underline 1px transparent;
     text-underline-offset: 5px;
     transition: text-decoration-color 300ms;
   }
 
   .post:hover .hover-underline {
-    text-decoration-color: rgba(255, 255, 255, 1);
+    text-decoration-color: black;
+  }
+
+  .dark .post:hover .hover-underline {
+    text-decoration-color: white;
   }
 </style>

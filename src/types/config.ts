@@ -22,7 +22,6 @@ export type Identity = {
 export type SEOInfo = {
   title: string;
   description: string;
-  image: string;
 };
 
 export type HomePageContent = {

@@ -4,6 +4,18 @@ export default {
   darkMode: "selector",
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            "code::before": {
+              content: '""'
+            },
+            "code::after": {
+              content: '""'
+            }
+          }
+        }
+      },
       colors: {
         "light-gray": "#21272E",
         "dark-gray": "#1B2128",
