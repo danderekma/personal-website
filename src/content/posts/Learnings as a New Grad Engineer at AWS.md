@@ -25,7 +25,7 @@ Maybe this is specific to Amazon’s culture, but there is a tremendous emphasis
 
 This became very apparent during my document review meeting, where I proposed a technical design for a new feature. Many reviewers raised concerns about the document’s flow and organization, and others pointed out additional edge cases and customer use cases that should be addressed. It became clear that this level of feedback was necessary, since my document served not only to communicate proposed changes to teammates but also to capture feature-specific context for new team members or external engineers.
 
-## Consider the context
+## Consider the context when communicating
 
 Communication, both verbal and written, can be highly multidisciplinary when interacting with stakeholders, managers, and customers. As a result, whenever starting a Slack thread or speaking up during a meeting, I’ve learned to put effort into considering the technical knowledge of my audience and bridging any context gaps that may exist. Doing so helps establish a shared foundation from which productive insights and meaningful discussion can emerge.
 
