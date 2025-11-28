@@ -25,17 +25,17 @@ Maybe this is specific to Amazon’s culture, but there is a tremendous emphasis
 
 This became very apparent during my document review meeting, where I proposed a technical design for a new feature. Many reviewers raised concerns about the document’s flow and organization, and others pointed out additional edge cases and customer use cases that should be addressed. It became clear that this level of feedback was necessary, since my document served not only to communicate proposed changes to teammates but also to capture feature-specific context for new team members or external engineers.
 
-## Consider the context when communicating
+## Communicate for your audience
 
 Communication, both verbal and written, can be highly multidisciplinary when interacting with stakeholders, managers, and customers. As a result, whenever starting a Slack thread or speaking up during a meeting, I’ve learned to put effort into considering the technical knowledge of my audience and bridging any context gaps that may exist. Doing so helps establish a shared foundation from which productive insights and meaningful discussion can emerge.
 
-## Overestimate time
+## Overestimate timelines
 
 Though intuitively it feels ideal to provide accurate time estimates, I’ve found that there is real value in overestimating how long tasks will take. Work that appears straightforward on the surface can quickly grow in complexity as you uncover hidden dependencies, coordinate with other team members or stakeholders, or run into unexpected technical challenges. Building in a buffer has helped me set clearer expectations with my manager and teammates, reduce unnecessary pressure, and ensure that the final deliverable meets the standards we expect.
 
 Overestimating time isn’t about lowering the bar but about planning realistically in an environment where uncertainty is normal. It creates space to validate assumptions, perform thorough testing, and handle unforeseen issues. This approach ultimately leads to more reliable delivery and strengthens trust with those who rely on your work.
 
-## Understand the business context
+## Understanding the business context
 
 Oftentimes I would be caught up in the depths of technical decisions and details that I would overlook the intended value of a particular feature I was trying to deliver. While this is still something I’m learning to practice more consistently, I’ve started to understand the importance of occasionally stepping back and considering the broader business context in order to make more informed and impactful technical decisions.
 
